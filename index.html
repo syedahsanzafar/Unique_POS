@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIQUE GRAPHICS ERP - v38.0</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <div id="connectivity-bar" class="connectivity-bar offline">
+        <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span class="status-text">Detecting Connection...</span>
+        </div>
+        <div id="sync-indicator" class="sync-indicator"></div>
+    </div>
+
+    <button class="menu-fab" onclick="toggleTaskbar()">☰</button>
+
+    <div class="header-brand">
+        <h2>UNIQUE GRAPHICS &amp; PUBLISHERS</h2>
+        <p>13-Al-Basit Street, Outfall Road, Lahore | 0300-0333678, 0348-5242128</p>
+    </div>
+
+    <div class="nav">
+        <div class="nav-inner">
+            <button class="nav-btn" onclick="switchView('dashboard', this); toggleTaskbar(false)"><span>📊</span>
+                Dashboard</button>
+            <button class="nav-btn active" onclick="switchView('sales', this); toggleTaskbar(false)"><span>🧾</span>
+                Billing</button>
+            <button class="nav-btn" onclick="switchView('payments', this); toggleTaskbar(false)"><span>💸</span>
+                Payments</button>
+            <button class="nav-btn" onclick="switchView('purchasing', this); toggleTaskbar(false)"><span>🛒</span>
+                Purchasing</button>
+            <button class="nav-btn" onclick="switchView('inventory', this); toggleTaskbar(false)"><span>📦</span>
+                Inventory</button>
+            <button class="nav-btn" onclick="switchView('customers', this); toggleTaskbar(false)"><span>👥</span>
+                Customers</button>
+            <button class="nav-btn" onclick="switchView('labours', this); toggleTaskbar(false)"><span>👷</span>
+                Labours</button>
+            <button class="nav-btn" onclick="switchView('reports', this); toggleTaskbar(false)"><span>📈</span>
+                Reports</button>
+            <button class="nav-btn" onclick="switchView('database', this); toggleTaskbar(false)"><span>⚙️</span>
+                System</button>
+        </div>
+    </div>
+
+    <div id="dashboard" class="view">
+        <div class="dash-grid">
+            <div class="stat-card sales" onclick="handleStatClick(this, 'Sales Summary')">
+                <h3>Annual Sales Amount</h3>
+                <span class="value" id="dash-total-sale">RS 0</span>
+                <div class="stat-details" id="dash-sale-detail">Loading...</div>
+            </div>
+            <div class="stat-card receivable" onclick="handleStatClick(this, 'Receivables')">
+                <h3>Total Receivable</h3>
+                <span class="value" id="dash-total-receive">RS 0</span>
+                <div class="stat-details" id="dash-receive-detail">Loading...</div>
+            </div>
+            <div class="stat-card royalty" onclick="handleStatClick(this, 'Royalty Report')">
+                <h3>Net Payable Royalty</h3>
+                <span class="value" id="dash-total-tax">RS 0</span>
+                <div class="stat-hint" style="font-size: 10px; color: var(--slate-400); margin-top: 5px;">Annual Net
+                    Payable (Click to Export)</div>
+                <div class="stat-details" id="dash-royalty-detail"></div>
+            </div>
+            <div class="stat-card royalty-pay" onclick="handleRoyaltyStatClick(this)">
+                <h3>Royalty Paid</h3>
+                <span class="value" id="dash-total-roy-paid">RS 0</span>
+                <div class="stat-hint" style="font-size: 10px; color: var(--slate-400); margin-top: 5px;">Click to
+                    Record / History</div>
+                <div class="stat-details" id="dash-roy-paid-detail"></div>
+            </div>
+            <div class="stat-card asset" onclick="handleStatClick(this, 'Inventory Assets')">
+                <h3>Inventory Asset Value</h3>
+                <span class="value" id="dash-stock-val">RS 0</span>
+                <div class="stat-details" id="dash-stock-detail">Loading...</div>
+            </div>
+            <div class="stat-card today-pay" onclick="handleStatClick(this, 'Today Payments')">
+                <h3>Payment Received (Today)</h3>
+                <span class="value" id="dash-today-pay">RS 0</span>
+                <div class="stat-details" id="dash-today-pay-detail">Loading...</div>
+            </div>
+            <div class="stat-card total-pay" onclick="handleStatClick(this, 'Total Payments History')">
+                <h3>Total Payment Received</h3>
+                <span class="value" id="dash-total-pay">RS 0</span>
+                <div class="stat-details" id="dash-total-pay-detail">Loading...</div>
+            </div>
+        </div>
+        <div class="chart-container">
+            <div class="card">
+                <h3 style="margin-top:0; font-size: 14px;">Annual Sales vs Targets &amp; Stock</h3>
+                <div style="height: 350px;"><canvas id="salesChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3 style="margin-top:0; font-size: 14px;">Top 10 Customers (By Revenue)</h3>
+                <div style="height: 250px;"><canvas id="topSellersChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3 style="margin-top:0; font-size: 14px;">Customer Receivables (Payables)</h3>
+                <div style="height: 250px;"><canvas id="payableChart"></canvas></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="card">
+                <h3 style="margin-top:0;">Item Sales Performance</h3>
+                <div class="scroll-table">
+                    <table class="compact-table">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th style="text-align:center;">Qty</th>
+                                <th style="text-align:center;">Target</th>
+                                <th style="text-align:center;">%</th>
+                                <th style="text-align:right;">Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dash-item-list"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card bg-slate border-dashed" id="detail-panel">
+                <div id="detail-empty-state" style="text-align: center; padding: 50px 20px;">
+                    <p class="text-slate-400">Click an item from the table to see top 10 buyers for that product.</p>
+                </div>
+                <div id="detail-content" style="display: none;">
+                    <div style="display:flex; align-items:center; gap:15px; margin-bottom: 20px;">
+                        <div id="detail-item-image"></div>
+                        <h3 id="detail-item-title" class="text-primary" style="margin:0;">Item Detail</h3>
+                    </div>
+                    <p style="font-size: 13px; font-weight: bold; color: var(--slate-500);">Top 10 Customers (By Qty
+                        Bought)</p>
+                    <div class="table-wrapper shadow-none" style="border:none;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th style="text-align: right;">Qty</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dash-top-buyers"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sales" class="view active">
+        <div class="main-container">
+            <!-- Left Side: Selection -->
+            <div class="card">
+                <h3>Select Products</h3>
+                <div style="display: flex; gap: 16px; margin-bottom: 20px; align-items: center;">
+                    <div style="flex: 1;">
+                        <select id="s-cust">
+                            <option value="">Select Customer...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-search-container">
+                    <input type="text" id="grid-search" placeholder="🔍 Search products..."
+                        oninput="renderProductGrid()">
+                </div>
+
+                <div class="billing-touch-section">
+                    <div id="billing-product-grid" class="product-grid"
+                        style="max-height: 500px; overflow-y: auto; padding-right: 5px;"></div>
+                </div>
+            </div>
+
+            <!-- Right Side: Cart Summary -->
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h3 style="margin:0;">Current Bill</h3>
+                    <div id="total-display" class="text-primary" style="font-size:24px; font-weight:900;">RS 0</div>
+                </div>
+
+                <div class="table-wrapper" style="max-height: 550px; overflow-y: auto;">
+                    <table id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <button class="btn-main bg-success-gradient w-full mt-4" style="height:64px; font-size: 18px;"
+                    onclick="finalizeSale()">
+                    FINALIZE &amp; PRINT INVOICE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="payments" class="view">
+        <div class="card">
+            <h3>Record Customer Payment</h3>
+            <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px;">
+                    <label
+                        style="font-size: 11px; font-weight: 700; color: var(--slate-400); text-transform: uppercase; margin-bottom: 6px; display: block;">Customer</label>
+                    <select id="p-cust" onchange="showPayBalance()">
+                        <option value="">Select...</option>
+                    </select>
+                </div>
+                <div style="flex: 1; min-width: 150px;">
+                    <label
+                        style="font-size: 11px; font-weight: 700; color: var(--slate-400); text-transform: uppercase; margin-bottom: 6px; display: block;">Amount
+                        (RS)</label>
+                    <input type="number" id="p-amt" placeholder="e.g. 5000">
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <label
+                        style="font-size: 11px; font-weight: 700; color: var(--slate-400); text-transform: uppercase; margin-bottom: 6px; display: block;">Reference
+                        / Note</label>
+                    <input type="text" id="p-ref" placeholder="e.g. Cash, Bank Transfer">
+                </div>
+                <button class="btn-main bg-success" onclick="recordPayment()" style="height: 48px;">SAVE
+                    PAYMENT</button>
+            </div>
+            <div id="pay-bal-display" style="margin-top: 12px; font-weight: 600;"></div>
+        </div>
+        <div class="card">
+            <h3>Recent Payment History</h3>
+            <div class="table-wrapper">
+                <table id="pay-history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Reference</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="reports" class="view" style="max-width: 98%;">
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 style="margin: 0;">Sales Transaction History</h3>
+            </div>
+            <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 24px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <select id="r-cust" onchange="filterReports()">
+                        <option value="">All Customers</option>
+                    </select>
+                </div>
+                <button class="btn-main" id="btn-customer-report"
+                    style="display:none; height: 48px; background: var(--primary-dark);"
+                    onclick="showCustomerSalesReport()">
+                    <span>📄</span> SALES SUMMARY
+                </button>
+                <div style="flex: 1; min-width: 200px;">
+                    <input type="text" id="r-search" placeholder="🔍 Search Invoice #..." onkeyup="filterReports()">
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table id="reports-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Inv #</th>
+                            <th>Customer</th>
+                            <th>Items</th>
+                            <th>Total Bill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="inventory" class="view">
+        <div class="card">
+            <h3>Inventory</h3>
+            <div class="table-wrapper">
+                <table id="inv-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Target</th>
+                            <th>Bundle</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="mt-6 p-6 border-dashed"
+                style="border-top: 2px solid var(--slate-100); background: var(--slate-50); border-radius: 0 0 var(--radius-lg) var(--radius-lg);">
+                <p
+                    style="font-size: 11px; font-weight: 800; color: var(--slate-400); text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.05em;">
+                    Quick Add Item</p>
+                <div style="display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap;">
+                    <div style="flex: 2; min-width: 200px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">ITEM
+                            NAME</label>
+                        <input type="text" id="i-name" placeholder="e.g. Urdu Grammar 6">
+                    </div>
+                    <div style="flex: 1; min-width: 100px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">PRICE</label>
+                        <input type="number" id="i-price" placeholder="0">
+                    </div>
+                    <div style="flex: 1; min-width: 100px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">STK</label>
+                        <input type="number" id="i-stock" placeholder="0">
+                    </div>
+                    <div style="flex: 1; min-width: 100px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">TGT</label>
+                        <input type="number" id="i-target" placeholder="0">
+                    </div>
+                    <div style="flex: 1; min-width: 100px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">BNDL</label>
+                        <input type="number" id="i-bundle" value="50">
+                    </div>
+                    <div style="flex: 2; min-width: 180px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">IMAGE</label>
+                        <input type="file" id="i-image" accept="image/*" style="padding: 10px; font-size: 11px;">
+                    </div>
+                    <button class="btn-main" onclick="addItem()" style="height: 48px;">ADD ITEM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="customers" class="view">
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h3 style="margin:0;">Customer Directory</h3>
+                <button class="btn-main" onclick="document.getElementById('custAddModal').style.display='flex'">+
+                    ADD
+                    NEW CUSTOMER</button>
+            </div>
+            <div class="table-wrapper">
+                <table id="cust-table">
+                    <thead>
+                        <tr>
+                            <th>Store/Client Name</th>
+                            <th>Phone Number</th>
+                            <th>Current Balance</th>
+                            <th style="text-align:right;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="purchasing" class="view">
+        <div class="card">
+            <h3 style="margin-top:0;">Record New Purchase</h3>
+            <div style="display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <label
+                        style="font-size: 11px; font-weight: 700; color: var(--slate-400); text-transform: uppercase; margin-bottom: 6px; display: block;">Select
+                        Item</label>
+                    <select id="pur-item" style="display:none;" onchange="showItemPreviewPur()"></select>
+                    <div id="rich-item-pur" class="rich-select-container"></div>
+                </div>
+                <div style="width: 160px;">
+                    <label
+                        style="font-size: 11px; font-weight: 700; color: var(--slate-400); text-transform: uppercase; margin-bottom: 6px; display: block;">Purchase
+                        Cost</label>
+                    <input type="number" id="pur-cost" placeholder="RS 0">
+                </div>
+                <div style="width: 120px;">
+                    <label
+                        style="font-size: 11px; font-weight: 700; color: var(--slate-400); text-transform: uppercase; margin-bottom: 6px; display: block;">Quantity</label>
+                    <input type="number" id="pur-qty" placeholder="0">
+                </div>
+                <button class="btn-main" style="height: 48px; background: var(--primary-dark);"
+                    onclick="recordPurchase()">ADD TO STOCK</button>
+            </div>
+
+            <div id="item-preview-pur" class="bg-slate rounded-xl p-4 mt-6"
+                style="display:none; border: 1px solid var(--slate-200);">
+                <div style="display:flex; align-items:center; gap:15px;">
+                    <div id="preview-image-pur"></div>
+                    <div>
+                        <div id="preview-name-pur" style="font-weight:700; font-size:14px; color:var(--slate-900);">
+                        </div>
+                        <div id="preview-details-pur" style="font-size:12px; color:var(--slate-500); margin-top:4px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="margin-top:20px;">
+            <h3 style="margin-top:0;">Recent Purchase History</h3>
+            <div class="table-wrapper">
+                <table id="pur-history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Image</th>
+                            <th>Item Name</th>
+                            <th>Unit Cost</th>
+                            <th>Qty Added</th>
+                            <th>Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Labours View -->
+    <div id="labours" class="view">
+        <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h3 style="margin:0;">Labour Management</h3>
+                <button class="btn-main" style="background:var(--primary);"
+                    onclick="document.getElementById('labourAddModal').style.display='flex'">+ ADD LABOUR</button>
+            </div>
+            <div class="table-wrapper">
+                <table id="labour-table">
+                    <thead>
+                        <tr>
+                            <th>Labour Name</th>
+                            <th>WhatsApp Number</th>
+                            <th style="text-align:right;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Labour Add Modal -->
+    <div id="labourAddModal" class="modal-backdrop"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 5005; padding: 20px; backdrop-filter: blur(4px);">
+        <div class="modal-body"
+            style="background: white; padding: 30px; border-radius: 16px; width: 100%; max-width: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+            <h3 style="margin-top:0; margin-bottom:20px;">Register New Labour</h3>
+            <div style="display:grid; gap:15px;">
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">LABOUR
+                        NAME</label>
+                    <input type="text" id="l-name" placeholder="e.g. Ahmad Ali">
+                </div>
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">WHATSAPP
+                        NUMBER</label>
+                    <input type="text" id="l-phone" placeholder="e.g. 923001234567">
+                </div>
+            </div>
+            <div class="action-btns" style="margin-top:30px; display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                <button class="btn-main" onclick="addLabour()">SAVE LABOUR</button>
+                <button class="btn-main" style="background:var(--slate-200); color:var(--slate-800);"
+                    onclick="document.getElementById('labourAddModal').style.display='none'">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Labour Selection Modal -->
+    <div id="labourSelectModal" class="modal-backdrop"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 5006; padding: 20px; backdrop-filter: blur(4px);">
+        <div class="modal-body"
+            style="background: white; padding: 30px; border-radius: 16px; width: 100%; max-width: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+            <h3 style="margin-top:0; margin-bottom:20px;">Share with Mazdur</h3>
+            <p style="font-size:14px; color:var(--slate-500); margin-bottom:20px;">Select a mazdur to share this report
+                with via WhatsApp.</p>
+            <div style="display:grid; gap:15px;">
+                <select id="l-select-share" style="height:52px;"></select>
+            </div>
+            <div class="action-btns" style="margin-top:30px; display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                <button id="btn-confirm-share" class="btn-main">SHARE TO WHATSAPP</button>
+                <button class="btn-main" style="background:var(--slate-200); color:var(--slate-800);"
+                    onclick="document.getElementById('labourSelectModal').style.display='none'">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="database" class="view">
+        <div style="max-width: 850px; margin: 0 auto; display: grid; gap: 24px;">
+            <!-- Cloud Data Section -->
+            <div class="card" style="text-align: center; padding: 40px 30px;">
+                <div style="font-size: 50px; margin-bottom: 15px;">☁️</div>
+                <h3 style="justify-content: center; font-size: 22px; margin-bottom: 8px;">Cloud Synchronicity</h3>
+                <p style="color: var(--slate-400); font-size: 14px; margin-bottom: 30px;">Securely bridge your local
+                    data with GitHub repository backup.</p>
+
+                <div class="sys-btn-grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div style="grid-column: 1 / -1; margin-bottom: 10px;">
+                        <label
+                            style="font-size: 11px; font-weight: 700; color: var(--slate-400); display: block; margin-bottom: 5px; text-align: left;">GITHUB
+                            ACCESS TOKEN (PWD)</label>
+                        <input type="password" id="gh-token" placeholder="Enter your GitHub PAT here..."
+                            style="height: 40px; font-size: 13px;">
+                        <p style="font-size: 10px; color: var(--slate-400); margin-top: 5px; text-align: left;">Your
+                            token is saved locally in this browser.</p>
+                    </div>
+                    <div class="btn-sys cloud-up" onclick="cloudBackup()">
+                        <span style="font-size: 28px;">📤</span>
+                        <span style="font-weight: 700;">PUSH TO CLOUD</span>
+                        <span style="font-size: 10px; opacity: 0.8; font-weight: 500;">Overwrite cloud with
+                            local</span>
+                    </div>
+                    <div class="btn-sys cloud-dl" onclick="cloudRestore()">
+                        <span style="font-size: 28px;">📥</span>
+                        <span style="font-weight: 700;">PULL FROM CLOUD</span>
+                        <span style="font-size: 10px; opacity: 0.8; font-weight: 500;">Overwrite local with
+                            cloud</span>
+                    </div>
+                </div>
+
+                <div id="cloud-status" style="margin-top: 25px; font-weight: 700; color: var(--primary);"></div>
+            </div>
+
+            <!-- Local Data Section -->
+            <div class="card" style="text-align: center; padding: 40px 30px;">
+
+
+                <div class="sys-btn-grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div class="btn-sys local-dl" onclick="exportDB()">
+                        <span style="font-size: 28px;">📁</span>
+                        <span style="font-weight: 700;">DOWNLOAD BACKUP</span>
+                    </div>
+                    <div class="btn-sys local-up" onclick="document.getElementById('importFile').click()">
+                        <span style="font-size: 28px;">💾</span>
+                        <span style="font-weight: 700;">RESTORE FROM FILE</span>
+                    </div>
+                </div>
+                <input type="file" id="importFile" accept=".json" style="display:none" onchange="importDB()">
+            </div>
+        </div>
+    </div>
+
+    <div id="custAddModal"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 4000; padding: 20px; backdrop-filter: blur(4px);">
+        <div class="modal-body"
+            style="background: white; padding: 30px; border-radius: 16px; width: 100%; max-width: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+            <h3 style="margin-top:0; margin-bottom:20px;">Register New Customer</h3>
+            <div style="display:grid; gap:15px;">
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">STORE/CLIENT
+                        NAME</label>
+                    <input type="text" id="c-name" placeholder="e.g. Al-Noor Graphics">
+                </div>
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">PHONE
+                        NUMBER</label>
+                    <input type="text" id="c-phone" placeholder="e.g. 0300-1234567">
+                </div>
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">OPENING
+                        BALANCE (RS)</label>
+                    <input type="number" id="c-bal" placeholder="0">
+                </div>
+            </div>
+            <div class="action-btns" style="margin-top:30px; display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                <button class="btn-main" onclick="addCustomer()">SAVE CUSTOMER</button>
+                <button class="btn-main" style="background:var(--slate-200); color:var(--slate-800);"
+                    onclick="document.getElementById('custAddModal').style.display='none'">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Royalty Payment Modal -->
+    <div id="royaltyPayModal"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 4000; padding: 20px; backdrop-filter: blur(4px);">
+        <div class="modal-body"
+            style="background: white; padding: 30px; border-radius: 16px; width: 100%; max-width: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+            <h3 style="margin-top:0; margin-bottom:20px;">Record Royalty Payment</h3>
+            <div style="display:grid; gap:15px;">
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">PAYMENT
+                        AMOUNT (RS)</label>
+                    <input type="number" id="roy-pay-amount" placeholder="e.g. 50000">
+                </div>
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">CHEQUE
+                        / REFERENCE DETAILS</label>
+                    <input type="text" id="roy-pay-ref" placeholder="e.g. Cheque #12345 - Allied Bank">
+                </div>
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">PAYMENT
+                        DATE</label>
+                    <input type="date" id="roy-pay-date">
+                </div>
+            </div>
+            <div class="action-btns" style="margin-top:30px; display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                <button class="btn-main" onclick="recordRoyaltyPayment()">SAVE PAYMENT</button>
+                <button class="btn-main" style="background:var(--slate-200); color:var(--slate-800);"
+                    onclick="document.getElementById('royaltyPayModal').style.display='none'">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="editModal">
+        <div class="modal-body">
+            <h3 id="modalTitle"></h3>
+            <div id="discountList"></div><button class="btn-main" style="width:100%; margin-top:20px;"
+                onclick="closeModal()">SAVE DISCOUNTS</button>
+        </div>
+    </div>
+    <div id="itemEditModal">
+        <div class="modal-body">
+            <h3 style="margin-bottom:25px;">Edit Physical Item</h3>
+            <input type="hidden" id="edit-i-id">
+            <div style="display:grid; gap:12px;">
+                <div><label style="font-size:12px; font-weight:700; color:var(--slate-400);">ITEM NAME</label><input
+                        type="text" id="edit-i-name"></div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                    <div><label style="font-size:12px; font-weight:700; color:var(--slate-400);">PRICE</label><input
+                            type="number" id="edit-i-price"></div>
+                    <div><label style="font-size:12px; font-weight:700; color:var(--slate-400);">STOCK</label><input
+                            type="number" id="edit-i-stock"></div>
+                </div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                    <div><label style="font-size:12px; font-weight:700; color:var(--slate-400);">TARGET</label><input
+                            type="number" id="edit-i-target"></div>
+                    <div><label style="font-size:12px; font-weight:700; color:var(--slate-400);">BUNDLE</label><input
+                            type="number" id="edit-i-bundle"></div>
+                </div>
+                <div>
+                    <label
+                        style="font-size:12px; font-weight:700; color:var(--slate-400); display:block; margin-bottom:5px;">PRODUCT
+                        IMAGE (Optional)</label>
+                    <input type="file" id="edit-i-image" accept="image/*" style="padding:8px;">
+                    <div id="edit-i-preview" style="margin-top:10px;"></div>
+                </div>
+            </div>
+            <div class="action-btns" style="margin-top:25px;">
+                <button class="btn-main" style="flex:1" onclick="saveItemEdit()">UPDATE</button>
+                <button class="btn-main" style="flex:1; background:var(--red)"
+                    onclick="document.getElementById('itemEditModal').style.display='none'">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invoice Edit Modal -->
+    <div id="invoiceEditModal"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; align-items: center; justify-content: center; z-index: 5020; padding: 20px; backdrop-filter: blur(4px);">
+        <div class="modal-body"
+            style="background: white; padding: 30px; border-radius: 16px; width: 100%; max-width: 800px; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h3 id="editInvoiceTitle" style="margin:0; color: var(--slate-900);">Edit Invoice #0000</h3>
+                <div id="editInvoiceCustomer" style="font-weight:700; color: var(--primary);">Customer Name</div>
+            </div>
+
+            <div class="table-wrapper" style="margin-bottom:20px;">
+                <table id="edit-invoice-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Rate</th>
+                            <th>Qty</th>
+                            <th>Disc%</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="edit-invoice-body"></tbody>
+                </table>
+            </div>
+
+            <div style="background: var(--slate-50); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                <p
+                    style="font-size: 11px; font-weight: 800; color: var(--slate-400); text-transform: uppercase; margin-bottom: 12px;">
+                    Add Item to this Bill</p>
+                <div style="display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap;">
+                    <div style="flex: 2; min-width: 200px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">SELECT
+                            ITEM</label>
+                        <div id="rich-item-edit-inv" class="rich-select-container"></div>
+                        <select id="edit-inv-new-item" style="display:none;"></select>
+                    </div>
+                    <div style="width: 100px;">
+                        <label
+                            style="font-size: 10px; font-weight: 700; color: var(--slate-500); display: block; margin-bottom: 4px;">QTY</label>
+                        <input type="number" id="edit-inv-new-qty" value="1">
+                    </div>
+                    <button class="btn-main" onclick="addItemToEditInvoice()"
+                        style="height: 48px; background: var(--primary);">ADD</button>
+                </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:30px;">
+                <div style="font-size:18px; font-weight:900; color: var(--primary);">New Total: <span
+                        id="edit-invoice-total">RS 0</span></div>
+                <div class="action-btns">
+                    <button class="btn-main" style="background: var(--success);" onclick="saveInvoiceEdit()">SAVE
+                        CHANGES</button>
+                    <button class="btn-main" style="background: var(--slate-200); color: var(--slate-800);"
+                        onclick="document.getElementById('invoiceEditModal').style.display='none'">CANCEL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

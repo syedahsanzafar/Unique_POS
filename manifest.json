@@ -1,0 +1,17 @@
+{
+  "name": "UNIQUE GRAPHICS ERP",
+  "short_name": "UG ERP",
+  "description": "Enterprise Resource Planning for Unique Graphics & Publishers",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "pwa_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
