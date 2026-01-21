@@ -739,6 +739,13 @@
         "109": 25
       },
       "phone": "923445237543"
+    },
+    {
+      "id": 1768973704451,
+      "name": "United Book Depot Mirpur",
+      "phone": "+92341 5070129",
+      "balance": 0,
+      "discounts": {}
     }
   ],
   "payments": [
@@ -1190,7 +1197,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1768929063422,
+  "lastModified": 1768973704485,
   "royaltyPayments": [],
   "labours": [
     {
