@@ -253,7 +253,7 @@
     {
       "id": 1766667470611,
       "name": "Azad Book Depot Bhimber",
-      "balance": 1777444,
+      "balance": 1477444,
       "discounts": {
         "101": 16,
         "102": 16,
@@ -759,6 +759,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "1/30/2026, 10:52:07 PM",
+      "customer": "Azad Book Depot Bhimber",
+      "amount": 300000,
+      "ref": "Ammi NBP"
+    },
     {
       "date": "1/19/2026, 2:29:55 PM",
       "customer": "Amir Book Depot Hajira",
@@ -1364,7 +1370,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1769748915142,
+  "lastModified": 1769795527958,
   "royaltyPayments": [],
   "labours": [
     {
