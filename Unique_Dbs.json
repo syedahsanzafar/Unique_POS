@@ -624,7 +624,7 @@
     {
       "id": 231,
       "name": "Pakistan Book Depot Dhirkot",
-      "balance": 71100.5,
+      "balance": -0.5,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -759,6 +759,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "2/13/2026, 4:03:11 PM",
+      "customer": "Pakistan Book Depot Dhirkot",
+      "amount": 71101,
+      "ref": "F/B"
+    },
     {
       "date": "1/30/2026, 10:52:07 PM",
       "customer": "Azad Book Depot Bhimber",
@@ -1556,7 +1562,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1770915426504,
+  "lastModified": 1770980591392,
   "royaltyPayments": [],
   "labours": [
     {
