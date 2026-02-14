@@ -910,7 +910,8 @@
       ],
       "billTotal": 24675,
       "prevBal": 10000,
-      "finalPayable": 34675
+      "finalPayable": 34675,
+      "notes": "Farq last year bill"
     },
     {
       "inv": 1013,
@@ -1049,7 +1050,8 @@
       ],
       "billTotal": 254997.5,
       "prevBal": 1522446.5,
-      "finalPayable": 1777444
+      "finalPayable": 1777444,
+      "notes": "Via Muzaffar"
     },
     {
       "inv": 1011,
@@ -1189,7 +1191,8 @@
       "billTotal": 148050,
       "prevBal": 24278,
       "finalPayable": 185753,
-      "lastModified": 1768918314916
+      "lastModified": 1768918314916,
+      "notes": "Via Ibrahim mazdur"
     },
     {
       "inv": 1009,
@@ -1323,7 +1326,8 @@
       ],
       "billTotal": 17000,
       "prevBal": 180315,
-      "finalPayable": 197315
+      "finalPayable": 197315,
+      "notes": "Replace kar di thi, lekin home 7 wapis nahi i"
     },
     {
       "inv": 1006,
@@ -1571,7 +1575,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1770989954348,
+  "lastModified": 1771046379049,
   "royaltyPayments": [],
   "labours": [
     {
