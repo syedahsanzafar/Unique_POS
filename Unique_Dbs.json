@@ -117,6 +117,13 @@
       "phone": ""
     },
     {
+      "id": 1771243724201,
+      "name": "Abshar Book Depot Kotli",
+      "phone": "03426195037",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 202,
       "name": "Adeel Book Depot Kotli",
       "balance": 0,
@@ -1575,7 +1582,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1771243075150,
+  "lastModified": 1771243724370,
   "royaltyPayments": [],
   "labours": [
     {
