@@ -962,7 +962,8 @@
       ],
       "billTotal": 53137.5,
       "prevBal": 17963,
-      "finalPayable": 71100.5
+      "finalPayable": 71100.5,
+      "notes": "Murad ka bhai le gaya 16/2"
     },
     {
       "inv": 1014,
@@ -1674,7 +1675,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1771245534920,
+  "lastModified": 1771252751427,
   "royaltyPayments": [],
   "labours": [
     {
