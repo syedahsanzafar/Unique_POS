@@ -936,7 +936,8 @@
       "billTotal": 242633.9,
       "prevBal": 123983,
       "finalPayable": 399958,
-      "lastModified": 1771863473659
+      "lastModified": 1771863473659,
+      "notes": "via altaf"
     },
     {
       "inv": 1017,
@@ -1872,7 +1873,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1771865106435,
+  "lastModified": 1771927372874,
   "royaltyPayments": [],
   "labours": [
     {
