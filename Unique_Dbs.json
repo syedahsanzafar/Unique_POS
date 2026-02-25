@@ -898,7 +898,8 @@
       "billTotal": 1065160,
       "prevBal": 0,
       "finalPayable": 1708840,
-      "lastModified": 1772048560614
+      "lastModified": 1772048560614,
+      "notes": "Via Javed 26-2"
     },
     {
       "inv": 1018,
@@ -1874,7 +1875,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772048560655,
+  "lastModified": 1772048588646,
   "royaltyPayments": [],
   "labours": [
     {
