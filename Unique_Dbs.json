@@ -725,7 +725,7 @@
     {
       "id": 236,
       "name": "Sidhwazai Book Depot Tararkhel",
-      "balance": 36225,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -775,6 +775,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "2/26/2026, 12:59:17 AM",
+      "customer": "Sidhwazai Book Depot Tararkhel",
+      "amount": 36225,
+      "ref": "F/B"
+    },
     {
       "date": "2/13/2026, 4:03:11 PM",
       "customer": "Pakistan Book Depot Dhirkot",
@@ -2001,7 +2007,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772049381252,
+  "lastModified": 1772049557081,
   "royaltyPayments": [],
   "labours": [
     {
