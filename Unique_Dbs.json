@@ -1004,7 +1004,8 @@
       ],
       "billTotal": 36225,
       "prevBal": 0,
-      "finalPayable": 36225
+      "finalPayable": 36225,
+      "notes": "Via Murad 24-2"
     },
     {
       "inv": 1016,
@@ -1875,7 +1876,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772048588646,
+  "lastModified": 1772048629892,
   "royaltyPayments": [],
   "labours": [
     {
