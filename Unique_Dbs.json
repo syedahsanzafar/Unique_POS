@@ -521,7 +521,7 @@
     {
       "id": 224,
       "name": "Khawaja Book Depot Athmuqam",
-      "balance": 85575,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -775,6 +775,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "2/26/2026, 1:06:47 PM",
+      "customer": "Khawaja Book Depot Athmuqam",
+      "amount": 85575,
+      "ref": "F/B"
+    },
     {
       "date": "2/26/2026, 12:59:17 AM",
       "customer": "Sidhwazai Book Depot Tararkhel",
@@ -2128,7 +2134,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772092500782,
+  "lastModified": 1772093207850,
   "royaltyPayments": [],
   "labours": [
     {
