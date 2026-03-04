@@ -254,15 +254,15 @@
       "name": "Awan Book Depot Tatapani",
       "balance": -0.5,
       "discounts": {
-        "101": 15,
-        "102": 15,
-        "103": 15,
-        "104": 25,
-        "105": 25,
-        "106": 25,
-        "107": 25,
-        "108": 25,
-        "109": 25
+        "101": 17,
+        "102": 17,
+        "103": 17,
+        "104": 27,
+        "105": 27,
+        "106": 27,
+        "107": 27,
+        "108": 27,
+        "109": 27
       },
       "phone": "923129542558"
     },
@@ -1002,7 +1002,8 @@
       ],
       "billTotal": 85655.88,
       "prevBal": -2063.5,
-      "finalPayable": 83592.38
+      "finalPayable": 83592.38,
+      "notes": "sheraz (pathan namaz) 26/2"
     },
     {
       "inv": 1023,
@@ -2255,7 +2256,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772129551804,
+  "lastModified": 1772604594119,
   "royaltyPayments": [],
   "labours": [
     {
