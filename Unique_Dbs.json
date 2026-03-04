@@ -413,7 +413,17 @@
       "id": 1766667828955,
       "name": "Dawn Book Depot Hajira",
       "balance": 201507,
-      "discounts": {},
+      "discounts": {
+        "101": 17,
+        "102": 17,
+        "103": 17,
+        "104": 27,
+        "105": 27,
+        "106": 27,
+        "107": 27,
+        "108": 27,
+        "109": 27
+      },
       "phone": "923135195438"
     },
     {
@@ -2348,7 +2358,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772604729755,
+  "lastModified": 1772605083270,
   "royaltyPayments": [],
   "labours": [
     {
