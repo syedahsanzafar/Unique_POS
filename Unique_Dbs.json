@@ -378,7 +378,7 @@
     {
       "id": 215,
       "name": "City Book Depot Mirpur",
-      "balance": 366616.9,
+      "balance": 399957.9,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/5/2026, 9:05:21 PM",
+      "customer": "City Book Depot Mirpur",
+      "amount": -33341,
+      "ref": "Adjustments Due to Software error"
+    },
     {
       "date": "2/26/2026, 1:06:47 PM",
       "customer": "Khawaja Book Depot Athmuqam",
@@ -2525,7 +2531,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772725158276,
+  "lastModified": 1772726721163,
   "royaltyPayments": [],
   "labours": [
     {
