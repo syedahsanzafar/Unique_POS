@@ -514,7 +514,7 @@
     {
       "id": 223,
       "name": "Kashmir Book Depot Rwp",
-      "balance": 450392,
+      "balance": 463817,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/5/2026, 9:06:41 PM",
+      "customer": "Kashmir Book Depot Rwp",
+      "amount": -13425,
+      "ref": "Adjustments Due to Software Error"
+    },
     {
       "date": "3/5/2026, 9:05:21 PM",
       "customer": "City Book Depot Mirpur",
@@ -2531,7 +2537,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772726721163,
+  "lastModified": 1772726801320,
   "royaltyPayments": [],
   "labours": [
     {
