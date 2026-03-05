@@ -983,7 +983,8 @@
       "billTotal": 252320.5,
       "prevBal": 201507,
       "finalPayable": 434227,
-      "lastModified": 1772612265201
+      "lastModified": 1772612265201,
+      "notes": "some items pending"
     },
     {
       "inv": 1027,
@@ -2514,7 +2515,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772703435032,
+  "lastModified": 1772703467544,
   "royaltyPayments": [],
   "labours": [
     {
