@@ -743,7 +743,13 @@ function editInvoice(invNum) {
     document.getElementById('editInvoiceCustomer').innerText = currentEditingInvoice.customer;
 
     renderEditInvoiceCart();
-    initRichSelect('rich-item-edit-inv', 'edit-inv-new-item', sortItems(db.items));
+    
+    // Fix: Populate the select options before initializing rich select
+    const sortedDbItems = sortItems(db.items);
+    document.getElementById('edit-inv-new-item').innerHTML = '<option value="">Select...</option>' + 
+        sortedDbItems.map(i => `<option value="${i.id}">${i.name}</option>`).join('');
+        
+    initRichSelect('rich-item-edit-inv', 'edit-inv-new-item', sortedDbItems);
     document.getElementById('invoiceEditModal').style.display = 'flex';
 }
 
@@ -818,11 +824,15 @@ function saveInvoiceEdit() {
         const item = db.items.find(i => i.id === newItem.id);
         if (item) item.stock -= newItem.qty;
     });
-    if (cust) cust.balance += newTotal;
+    if (cust) {
+        cust.balance += newTotal;
+    }
 
     // 3. Update Sales History
     oldInv.items = [...editInvoiceCart];
     oldInv.billTotal = newTotal;
+    // Fix: Recalculate finalPayable based on the new total so the printed invoice reflects the correct balance
+    oldInv.finalPayable = oldInv.prevBal + newTotal;
     oldInv.lastModified = Date.now();
 
     document.getElementById('invoiceEditModal').style.display = 'none';
