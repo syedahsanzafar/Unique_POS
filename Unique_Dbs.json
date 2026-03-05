@@ -1076,7 +1076,8 @@
       ],
       "billTotal": 816091.5,
       "prevBal": -0.5,
-      "finalPayable": 816091
+      "finalPayable": 816091,
+      "notes": "via murad"
     },
     {
       "inv": 1026,
@@ -2515,7 +2516,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772703467544,
+  "lastModified": 1772703485428,
   "royaltyPayments": [],
   "labours": [
     {
