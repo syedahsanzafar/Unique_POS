@@ -531,7 +531,7 @@
     {
       "id": 224,
       "name": "Khawaja Book Depot Athmuqam",
-      "balance": 68748.88,
+      "balance": 2063.8800000000047,
       "discounts": {
         "101": 16,
         "102": 16,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/6/2026, 10:24:40 PM",
+      "customer": "Khawaja Book Depot Athmuqam",
+      "amount": 66685,
+      "ref": "Cash"
+    },
     {
       "date": "3/6/2026, 7:54:50 PM",
       "customer": "Khurshid Sons Book Depot Abaspur",
@@ -3153,7 +3159,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772809649460,
+  "lastModified": 1772817881086,
   "royaltyPayments": [],
   "labours": [
     {
