@@ -548,7 +548,7 @@
     {
       "id": 225,
       "name": "Khurshid Sons Book Depot Abaspur",
-      "balance": 48745,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/6/2026, 7:54:50 PM",
+      "customer": "Khurshid Sons Book Depot Abaspur",
+      "amount": 48745,
+      "ref": "F/B online "
+    },
     {
       "date": "3/6/2026, 3:06:31 PM",
       "customer": "City Book Depot Mirpur",
@@ -1144,7 +1150,8 @@
       "billTotal": 48745,
       "prevBal": 0,
       "finalPayable": 48745,
-      "lastModified": 1772806861295
+      "lastModified": 1772806861295,
+      "notes": "khud le gaye thay"
     },
     {
       "inv": 1037,
@@ -3138,7 +3145,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772806861525,
+  "lastModified": 1772809118182,
   "royaltyPayments": [],
   "labours": [
     {
