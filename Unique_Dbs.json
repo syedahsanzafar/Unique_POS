@@ -1450,7 +1450,8 @@
       "billTotal": 499379,
       "prevBal": 399957.9,
       "finalPayable": 899336.9,
-      "lastModified": 1772809223908
+      "lastModified": 1772809223908,
+      "notes": "via altaf k larkay"
     },
     {
       "inv": 1033,
@@ -3148,7 +3149,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772809224163,
+  "lastModified": 1772809243205,
   "royaltyPayments": [],
   "labours": [
     {
