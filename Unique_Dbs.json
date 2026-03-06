@@ -1480,7 +1480,8 @@
       ],
       "billTotal": 236880,
       "prevBal": 1868534,
-      "finalPayable": 2105414
+      "finalPayable": 2105414,
+      "notes": "via muzaffar 6/3/26"
     },
     {
       "inv": 1031,
@@ -3149,7 +3150,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772809243205,
+  "lastModified": 1772809296607,
   "royaltyPayments": [],
   "labours": [
     {
