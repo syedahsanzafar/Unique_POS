@@ -1225,7 +1225,8 @@
       ],
       "billTotal": 143550,
       "prevBal": 80610,
-      "finalPayable": 224160
+      "finalPayable": 224160,
+      "notes": "via javed 6/3/26"
     },
     {
       "inv": 1036,
@@ -3145,7 +3146,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772809118182,
+  "lastModified": 1772809138956,
   "royaltyPayments": [],
   "labours": [
     {
