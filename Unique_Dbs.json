@@ -378,7 +378,7 @@
     {
       "id": 215,
       "name": "City Book Depot Mirpur",
-      "balance": 888807.9,
+      "balance": 388807.9,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/6/2026, 3:06:31 PM",
+      "customer": "City Book Depot Mirpur",
+      "amount": 500000,
+      "ref": "F/B Transfer"
+    },
     {
       "date": "3/5/2026, 9:06:41 PM",
       "customer": "Kashmir Book Depot Rwp",
@@ -3091,7 +3097,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772790530666,
+  "lastModified": 1772791591965,
   "royaltyPayments": [],
   "labours": [
     {
