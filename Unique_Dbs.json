@@ -218,7 +218,7 @@
     {
       "id": 206,
       "name": "Amir Book Depot Hajira",
-      "balance": 19050,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/7/2026, 1:45:17 PM",
+      "customer": "Amir Book Depot Hajira",
+      "amount": 19050,
+      "ref": "Global online"
+    },
     {
       "date": "3/6/2026, 10:24:40 PM",
       "customer": "Khawaja Book Depot Athmuqam",
@@ -3216,7 +3222,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1772871560584,
+  "lastModified": 1772873117730,
   "royaltyPayments": [],
   "labours": [
     {
