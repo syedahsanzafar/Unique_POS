@@ -269,7 +269,7 @@
     {
       "id": 1766667470611,
       "name": "Azad Book Depot Bhimber",
-      "balance": 2105414,
+      "balance": 1705414,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/9/2026, 7:11:14 PM",
+      "customer": "Azad Book Depot Bhimber",
+      "amount": 400000,
+      "ref": "Ashraf sb k account mai"
+    },
     {
       "date": "3/7/2026, 1:45:17 PM",
       "customer": "Amir Book Depot Hajira",
@@ -3289,7 +3295,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773050906184,
+  "lastModified": 1773065474889,
   "royaltyPayments": [],
   "labours": [
     {
