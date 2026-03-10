@@ -1447,7 +1447,8 @@
       "billTotal": 34592.5,
       "prevBal": 0,
       "finalPayable": 34592.5,
-      "lastModified": 1773122166897
+      "lastModified": 1773122166897,
+      "notes": "Javed le gaya"
     },
     {
       "inv": 1048,
@@ -4068,7 +4069,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773156353734,
+  "lastModified": 1773180905566,
   "royaltyPayments": [],
   "labours": [
     {
