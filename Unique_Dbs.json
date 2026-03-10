@@ -126,7 +126,7 @@
     {
       "id": 202,
       "name": "Adeel Book Depot Kotli",
-      "balance": 34592.5,
+      "balance": 192.5,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/10/2026, 6:51:56 PM",
+      "customer": "Adeel Book Depot Kotli",
+      "amount": 34400,
+      "ref": "Faisal bank"
+    },
     {
       "date": "3/10/2026, 6:48:36 PM",
       "customer": "Dawn Book Depot Hajira",
@@ -3986,7 +3992,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773150516824,
+  "lastModified": 1773150716383,
   "royaltyPayments": [],
   "labours": [
     {
