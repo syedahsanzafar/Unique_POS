@@ -429,7 +429,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 0,
+      "balance": 52224,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -3805,7 +3805,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773123460038,
+  "lastModified": 1773129164851,
   "royaltyPayments": [],
   "labours": [
     {
