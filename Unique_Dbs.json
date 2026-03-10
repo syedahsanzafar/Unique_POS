@@ -412,7 +412,7 @@
     {
       "id": 1766667828955,
       "name": "Dawn Book Depot Hajira",
-      "balance": 690431,
+      "balance": 590431,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/10/2026, 6:48:36 PM",
+      "customer": "Dawn Book Depot Hajira",
+      "amount": 100000,
+      "ref": "Ashraf sb ubl"
+    },
     {
       "date": "3/9/2026, 7:11:14 PM",
       "customer": "Azad Book Depot Bhimber",
@@ -3980,7 +3986,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773146201197,
+  "lastModified": 1773150516824,
   "royaltyPayments": [],
   "labours": [
     {
