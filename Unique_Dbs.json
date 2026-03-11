@@ -514,7 +514,7 @@
     {
       "id": 223,
       "name": "Kashmir Book Depot Rwp",
-      "balance": 1223163,
+      "balance": 623163,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/11/2026, 12:55:11 PM",
+      "customer": "Kashmir Book Depot Rwp",
+      "amount": 600000,
+      "ref": "Ashraf sb ubl"
+    },
     {
       "date": "3/10/2026, 6:51:56 PM",
       "customer": "Adeel Book Depot Kotli",
@@ -4069,7 +4075,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773181288962,
+  "lastModified": 1773215711990,
   "royaltyPayments": [],
   "labours": [
     {
