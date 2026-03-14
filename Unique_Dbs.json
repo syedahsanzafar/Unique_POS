@@ -286,7 +286,7 @@
     {
       "id": 210,
       "name": "Azad Book Depot Mzd",
-      "balance": 528363,
+      "balance": 478363,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/14/2026, 5:26:26 PM",
+      "customer": "Azad Book Depot Mzd",
+      "amount": 50000,
+      "ref": "Cash"
+    },
     {
       "date": "3/14/2026, 5:02:03 PM",
       "customer": "Diamond Book Depot Mzd",
@@ -4081,7 +4087,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773489723734,
+  "lastModified": 1773491187455,
   "royaltyPayments": [],
   "labours": [
     {
