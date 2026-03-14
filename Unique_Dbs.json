@@ -429,7 +429,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 343594,
+      "balance": 329144,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/14/2026, 5:02:03 PM",
+      "customer": "Diamond Book Depot Mzd",
+      "amount": 14450,
+      "ref": "Stationary bags"
+    },
     {
       "date": "3/11/2026, 12:55:11 PM",
       "customer": "Kashmir Book Depot Rwp",
@@ -4075,7 +4081,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773215711990,
+  "lastModified": 1773489723734,
   "royaltyPayments": [],
   "labours": [
     {
