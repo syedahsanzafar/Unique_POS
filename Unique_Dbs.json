@@ -286,7 +286,7 @@
     {
       "id": 210,
       "name": "Azad Book Depot Mzd",
-      "balance": 488363,
+      "balance": 388363,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -785,6 +785,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/17/2026, 5:37:01 PM",
+      "customer": "Azad Book Depot Mzd",
+      "amount": 100000,
+      "ref": "Fb online "
+    },
     {
       "date": "3/14/2026, 7:21:43 PM",
       "customer": "Azad Book Depot Mzd",
@@ -4093,7 +4099,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1773498231169,
+  "lastModified": 1773751022096,
   "royaltyPayments": [],
   "labours": [
     {
