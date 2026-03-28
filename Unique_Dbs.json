@@ -604,6 +604,13 @@
       "phone": "923465140801"
     },
     {
+      "id": 1774678162655,
+      "name": "Mujahid Book Depot Nakyal",
+      "phone": "",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 228,
       "name": "Muslim Book Depot Mzd",
       "balance": 217350,
@@ -4483,7 +4490,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774677941670,
+  "lastModified": 1774678162740,
   "royaltyPayments": [],
   "labours": [
     {
