@@ -760,7 +760,7 @@
     {
       "id": 235,
       "name": "Shahid Book Depot Dudyal",
-      "balance": 181375,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -827,6 +827,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/28/2026, 3:22:13 PM",
+      "customer": "Shahid Book Depot Dudyal",
+      "amount": 181375,
+      "ref": "FB online"
+    },
     {
       "date": "3/26/2026, 4:22:16 PM",
       "customer": "Diamond Book Depot Mzd",
@@ -4920,7 +4926,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774687580462,
+  "lastModified": 1774693333164,
   "royaltyPayments": [],
   "labours": [
     {
