@@ -509,6 +509,13 @@
       "phone": "923314791271"
     },
     {
+      "id": 1774679292579,
+      "name": "Iqra Book Depot Garhi Dopatta",
+      "phone": "",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 222,
       "name": "Iqra Book Depot Rwp",
       "balance": 1113671,
@@ -4671,7 +4678,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774679230366,
+  "lastModified": 1774679292740,
   "royaltyPayments": [],
   "labours": [
     {
