@@ -594,7 +594,7 @@
       "id": 1774677693375,
       "name": "Maktaba e Rashidia Plandari",
       "phone": "923418998940",
-      "balance": 103725,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -827,6 +827,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/28/2026, 3:22:37 PM",
+      "customer": "Maktaba e Rashidia Plandari",
+      "amount": 103725,
+      "ref": "FB online"
+    },
     {
       "date": "3/28/2026, 3:22:13 PM",
       "customer": "Shahid Book Depot Dudyal",
@@ -4926,7 +4932,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774693333164,
+  "lastModified": 1774693357188,
   "royaltyPayments": [],
   "labours": [
     {
