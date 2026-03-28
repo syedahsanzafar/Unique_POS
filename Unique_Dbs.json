@@ -392,7 +392,7 @@
     {
       "id": 215,
       "name": "City Book Depot Mirpur",
-      "balance": 1332331.9,
+      "balance": 832331.8999999999,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -827,6 +827,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/28/2026, 11:12:24 PM",
+      "customer": "City Book Depot Mirpur",
+      "amount": 500000,
+      "ref": "FB online"
+    },
     {
       "date": "3/28/2026, 7:15:17 PM",
       "customer": "Mujahid Book Depot Nakyal",
@@ -5042,7 +5048,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774707419868,
+  "lastModified": 1774721544950,
   "royaltyPayments": [],
   "labours": [
     {
