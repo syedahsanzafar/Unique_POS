@@ -563,6 +563,13 @@
       "phone": "923400117717"
     },
     {
+      "id": 1774677693375,
+      "name": "Maktaba e Rashidia Plandari",
+      "phone": "923418998940",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 226,
       "name": "Mirza Book Depot Hatiyan",
       "balance": 22450,
@@ -4337,7 +4344,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774677453822,
+  "lastModified": 1774677693476,
   "royaltyPayments": [],
   "labours": [
     {
