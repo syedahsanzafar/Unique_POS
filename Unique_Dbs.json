@@ -444,6 +444,13 @@
       "phone": "923444177770"
     },
     {
+      "id": 1774679170918,
+      "name": "Farooq (Karam Deen)  Book Depot Garhi Dopatta ",
+      "phone": "",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 219,
       "name": "Fazal Rehman Books Jona Sehensa",
       "balance": 0,
@@ -4657,7 +4664,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774678795676,
+  "lastModified": 1774679170975,
   "royaltyPayments": [],
   "labours": [
     {
