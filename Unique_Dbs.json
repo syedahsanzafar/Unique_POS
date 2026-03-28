@@ -225,7 +225,7 @@
     {
       "id": 206,
       "name": "Amir Book Depot Hajira",
-      "balance": 25930,
+      "balance": 8755,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -827,6 +827,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/28/2026, 3:23:15 PM",
+      "customer": "Amir Book Depot Hajira",
+      "amount": 17175,
+      "ref": "FB online"
+    },
     {
       "date": "3/28/2026, 3:22:37 PM",
       "customer": "Maktaba e Rashidia Plandari",
@@ -4932,7 +4938,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774693357188,
+  "lastModified": 1774693395770,
   "royaltyPayments": [],
   "labours": [
     {
