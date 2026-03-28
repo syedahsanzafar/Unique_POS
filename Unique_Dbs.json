@@ -325,6 +325,13 @@
       "phone": "923334748817"
     },
     {
+      "id": 1774679230281,
+      "name": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
+      "phone": "",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 212,
       "name": "Chaudary Book Depot Garhi Dopatta",
       "balance": 179685,
@@ -4664,7 +4671,7 @@
   "logs": [],
   "invoiceCounter": 1003,
   "purchases": [],
-  "lastModified": 1774679170975,
+  "lastModified": 1774679230366,
   "royaltyPayments": [],
   "labours": [
     {
