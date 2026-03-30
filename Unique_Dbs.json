@@ -1146,7 +1146,8 @@
       ],
       "billTotal": 400095,
       "prevBal": 932236.9,
-      "finalPayable": 1332331.9
+      "finalPayable": 1332331.9,
+      "notes": "via altaf ka bhai"
     },
     {
       "inv": 1072,
@@ -5120,7 +5121,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774888560853,
+  "lastModified": 1774888573947,
   "royaltyPayments": [],
   "labours": [
     {
