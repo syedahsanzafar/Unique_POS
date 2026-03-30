@@ -1107,7 +1107,8 @@
       "billTotal": 222990,
       "prevBal": 1934734,
       "finalPayable": 2157724,
-      "lastModified": 1774878138480
+      "lastModified": 1774878138480,
+      "notes": "via Muzaffar 30-3"
     },
     {
       "inv": 1073,
@@ -5119,7 +5120,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774888513380,
+  "lastModified": 1774888560853,
   "royaltyPayments": [],
   "labours": [
     {
