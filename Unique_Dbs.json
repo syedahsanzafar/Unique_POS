@@ -812,7 +812,7 @@
       "id": 1768973704451,
       "name": "United Book Depot Mirpur",
       "phone": "+92341 5070129",
-      "balance": 100723,
+      "balance": 723,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -827,6 +827,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/30/2026, 6:44:44 PM",
+      "customer": "United Book Depot Mirpur",
+      "amount": 100000,
+      "ref": "FB online"
+    },
     {
       "date": "3/28/2026, 11:12:24 PM",
       "customer": "City Book Depot Mirpur",
@@ -5147,7 +5153,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774878138619,
+  "lastModified": 1774878284432,
   "royaltyPayments": [],
   "labours": [
     {
