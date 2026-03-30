@@ -276,7 +276,7 @@
     {
       "id": 1766667470611,
       "name": "Azad Book Depot Bhimber",
-      "balance": 2157724,
+      "balance": 2152804,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -827,6 +827,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "3/30/2026, 8:16:44 PM",
+      "customer": "Azad Book Depot Bhimber",
+      "amount": 4920,
+      "ref": "Home 7 rate difference"
+    },
     {
       "date": "3/30/2026, 6:44:44 PM",
       "customer": "United Book Depot Mirpur",
@@ -5153,7 +5159,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774878291908,
+  "lastModified": 1774883866590,
   "royaltyPayments": [],
   "labours": [
     {
