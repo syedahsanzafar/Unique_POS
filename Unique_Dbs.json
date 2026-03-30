@@ -1233,7 +1233,8 @@
       ],
       "billTotal": 8755,
       "prevBal": 17175,
-      "finalPayable": 25930
+      "finalPayable": 25930,
+      "notes": "via javed"
     },
     {
       "inv": 1070,
@@ -5122,7 +5123,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774888588817,
+  "lastModified": 1774888622110,
   "royaltyPayments": [],
   "labours": [
     {
