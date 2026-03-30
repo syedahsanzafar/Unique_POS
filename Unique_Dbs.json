@@ -48,7 +48,7 @@
     {
       "id": 102,
       "name": "HOME ECONOMICS 7",
-      "price": 200,
+      "price": 180,
       "stock": 4800,
       "target": 5000,
       "bundleSize": 40,
@@ -5159,7 +5159,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774883866590,
+  "lastModified": 1774883897557,
   "royaltyPayments": [],
   "labours": [
     {
