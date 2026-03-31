@@ -424,6 +424,13 @@
       "phone": "923425086071"
     },
     {
+      "id": 1774945585368,
+      "name": "Daizy Book Depot Nakyal",
+      "phone": "",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 1766667828955,
       "name": "Dawn Book Depot Hajira",
       "balance": 590431,
@@ -5136,7 +5143,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774888815025,
+  "lastModified": 1774945585454,
   "royaltyPayments": [],
   "labours": [
     {
