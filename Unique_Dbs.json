@@ -493,7 +493,17 @@
       "name": "Ghazi Book Depot Chinari",
       "phone": "",
       "balance": 0,
-      "discounts": {}
+      "discounts": {
+        "101": 17,
+        "102": 17,
+        "103": 17,
+        "104": 26,
+        "105": 26,
+        "106": 26,
+        "107": 26,
+        "108": 26,
+        "109": 26
+      }
     },
     {
       "id": 220,
@@ -5336,7 +5346,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774966912691,
+  "lastModified": 1774966960412,
   "royaltyPayments": [],
   "labours": [
     {
