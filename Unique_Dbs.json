@@ -492,7 +492,7 @@
       "id": 1774966912641,
       "name": "Ghazi Book Depot Chinari",
       "phone": "",
-      "balance": 136377.5,
+      "balance": 134510,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -1100,24 +1100,6 @@
           "bundles": 5
         },
         {
-          "name": "HOME ECONOMICS 6",
-          "rate": 225,
-          "qty": 50,
-          "disc": 17,
-          "total": 9337.5,
-          "id": 101,
-          "bundles": 1.25
-        },
-        {
-          "name": "HOME ECONOMICS 7",
-          "rate": 200,
-          "qty": 50,
-          "disc": 17,
-          "total": 8300,
-          "id": 102,
-          "bundles": 1.25
-        },
-        {
           "name": "HOME ECONOMICS 8",
           "rate": 240,
           "qty": 50,
@@ -1125,11 +1107,28 @@
           "total": 9960,
           "id": 103,
           "bundles": 1
+        },
+        {
+          "id": 102,
+          "name": "HOME ECONOMICS 7",
+          "rate": 180,
+          "qty": 50,
+          "disc": 17,
+          "total": 7470
+        },
+        {
+          "id": 101,
+          "name": "HOME ECONOMICS 6",
+          "rate": 200,
+          "qty": 50,
+          "disc": 17,
+          "total": 8300
         }
       ],
-      "billTotal": 136377.5,
+      "billTotal": 134510,
       "prevBal": 0,
-      "finalPayable": 136377.5
+      "finalPayable": 134510,
+      "lastModified": 1774967622163
     },
     {
       "inv": 1078,
@@ -5438,7 +5437,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774967454158,
+  "lastModified": 1774967622298,
   "royaltyPayments": [],
   "labours": [
     {
