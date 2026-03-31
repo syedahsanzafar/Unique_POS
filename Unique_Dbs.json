@@ -489,6 +489,13 @@
       "phone": "923425119693"
     },
     {
+      "id": 1774966912641,
+      "name": "Ghazi Book Depot Chinari",
+      "phone": "",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 220,
       "name": "Hameed Sons Kitab Ghar Abaspur",
       "balance": 180315,
@@ -5329,7 +5336,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1774961108518,
+  "lastModified": 1774966912691,
   "royaltyPayments": [],
   "labours": [
     {
