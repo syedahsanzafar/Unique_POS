@@ -242,7 +242,7 @@
     {
       "id": 1766645946801,
       "name": "Awami Book Depot Mzd",
-      "balance": 224160,
+      "balance": 124160,
       "discounts": {
         "101": 0,
         "102": 0,
@@ -699,7 +699,7 @@
     {
       "id": 230,
       "name": "Pak Book Depot Mzd",
-      "balance": 201200,
+      "balance": 101200,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -851,6 +851,18 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/5/2026, 4:25:35 PM",
+      "customer": "Pak Book Depot Mzd",
+      "amount": 100000,
+      "ref": "Cash"
+    },
+    {
+      "date": "4/5/2026, 4:14:44 PM",
+      "customer": "Awami Book Depot Mzd",
+      "amount": 100000,
+      "ref": "Cash"
+    },
     {
       "date": "4/1/2026, 5:17:46 PM",
       "customer": "Sidhwazai Book Depot Tararkhel",
@@ -5841,7 +5853,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775301972552,
+  "lastModified": 1775389961899,
   "royaltyPayments": [],
   "labours": [
     {
