@@ -225,7 +225,7 @@
     {
       "id": 206,
       "name": "Amir Book Depot Hajira",
-      "balance": 36225,
+      "balance": 5,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -851,6 +851,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/8/2026, 3:24:59 PM",
+      "customer": "Amir Book Depot Hajira",
+      "amount": 36220,
+      "ref": "FB online"
+    },
     {
       "date": "4/8/2026, 3:14:37 PM",
       "customer": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
@@ -6421,7 +6427,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775643516091,
+  "lastModified": 1775643899268,
   "royaltyPayments": [],
   "labours": [
     {
