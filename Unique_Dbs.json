@@ -335,7 +335,7 @@
       "id": 1774679230281,
       "name": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
       "phone": "",
-      "balance": 36225,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -851,6 +851,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/8/2026, 3:14:37 PM",
+      "customer": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
+      "amount": 36225,
+      "ref": "FB via 5 star"
+    },
     {
       "date": "4/8/2026, 3:13:25 PM",
       "customer": "Adeel Book Depot Kotli",
@@ -6415,7 +6421,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775643205742,
+  "lastModified": 1775643277533,
   "royaltyPayments": [],
   "labours": [
     {
