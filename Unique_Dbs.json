@@ -733,7 +733,7 @@
     {
       "id": 232,
       "name": "Raza Book Depot Mzd",
-      "balance": 24675,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -851,6 +851,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/8/2026, 9:57:18 AM",
+      "customer": "Raza Book Depot Mzd",
+      "amount": 24675,
+      "ref": "via 5 star"
+    },
     {
       "date": "4/8/2026, 9:57:03 AM",
       "customer": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
@@ -6116,7 +6122,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775624223629,
+  "lastModified": 1775624238082,
   "royaltyPayments": [],
   "labours": [
     {
