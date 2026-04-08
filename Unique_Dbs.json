@@ -335,7 +335,7 @@
       "id": 1774679230281,
       "name": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
       "phone": "",
-      "balance": 72450,
+      "balance": 36225,
       "discounts": {}
     },
     {
@@ -851,6 +851,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/8/2026, 9:57:03 AM",
+      "customer": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
+      "amount": 36225,
+      "ref": "via 5 star"
+    },
     {
       "date": "4/8/2026, 9:56:42 AM",
       "customer": "Iqra Book Depot Garhi Dopatta",
@@ -6110,7 +6116,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775624202923,
+  "lastModified": 1775624223629,
   "royaltyPayments": [],
   "labours": [
     {
