@@ -133,7 +133,7 @@
     {
       "id": 202,
       "name": "Adeel Book Depot Kotli",
-      "balance": 24887.5,
+      "balance": 287.5,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -618,7 +618,7 @@
       "id": 1774677693375,
       "name": "Maktaba e Rashidia Plandari",
       "phone": "923418998940",
-      "balance": 24675,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -851,6 +851,18 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/8/2026, 3:13:25 PM",
+      "customer": "Adeel Book Depot Kotli",
+      "amount": 24600,
+      "ref": "FB online"
+    },
+    {
+      "date": "4/8/2026, 3:12:18 PM",
+      "customer": "Maktaba e Rashidia Plandari",
+      "amount": 24675,
+      "ref": "FB online"
+    },
     {
       "date": "4/8/2026, 10:12:14 AM",
       "customer": "Moiz Stationers Hajira",
@@ -6403,7 +6415,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775643084676,
+  "lastModified": 1775643205742,
   "royaltyPayments": [],
   "labours": [
     {
