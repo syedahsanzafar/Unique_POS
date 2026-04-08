@@ -543,7 +543,7 @@
       "id": 1774679292579,
       "name": "Iqra Book Depot Garhi Dopatta",
       "phone": "",
-      "balance": 23642.5,
+      "balance": -0.5,
       "discounts": {}
     },
     {
@@ -851,6 +851,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/8/2026, 9:56:42 AM",
+      "customer": "Iqra Book Depot Garhi Dopatta",
+      "amount": 23643,
+      "ref": "via 5star"
+    },
     {
       "date": "4/8/2026, 9:56:27 AM",
       "customer": "786 Book Depot Hattiyan",
@@ -6104,7 +6110,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775624187471,
+  "lastModified": 1775624202923,
   "royaltyPayments": [],
   "labours": [
     {
