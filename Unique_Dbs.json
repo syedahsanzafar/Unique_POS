@@ -641,7 +641,7 @@
     {
       "id": 227,
       "name": "Moiz Stationers Hajira",
-      "balance": 239531,
+      "balance": 531,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -851,6 +851,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/8/2026, 10:12:14 AM",
+      "customer": "Moiz Stationers Hajira",
+      "amount": 239000,
+      "ref": "FB online"
+    },
     {
       "date": "4/8/2026, 9:57:18 AM",
       "customer": "Raza Book Depot Mzd",
@@ -6273,7 +6279,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775624922212,
+  "lastModified": 1775625166753,
   "royaltyPayments": [],
   "labours": [
     {
