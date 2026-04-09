@@ -416,7 +416,7 @@
     {
       "id": 216,
       "name": "College Book Depot Kotli",
-      "balance": 26040,
+      "balance": 0,
       "discounts": {
         "101": 16,
         "102": 16,
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/9/2026, 7:24:03 PM",
+      "customer": "College Book Depot Kotli",
+      "amount": 26040,
+      "ref": "FB online"
+    },
     {
       "date": "4/8/2026, 3:24:59 PM",
       "customer": "Amir Book Depot Hajira",
@@ -6587,7 +6593,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775744620426,
+  "lastModified": 1775744643604,
   "royaltyPayments": [],
   "labours": [
     {
