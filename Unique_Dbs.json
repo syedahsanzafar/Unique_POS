@@ -1213,7 +1213,8 @@
       ],
       "billTotal": 12337.5,
       "prevBal": 24675,
-      "finalPayable": 37012.5
+      "finalPayable": 37012.5,
+      "notes": "via Amjad"
     },
     {
       "inv": 1099,
@@ -6611,7 +6612,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775744697699,
+  "lastModified": 1775744882002,
   "royaltyPayments": [],
   "labours": [
     {
