@@ -418,9 +418,9 @@
       "name": "College Book Depot Kotli",
       "balance": 26350,
       "discounts": {
-        "101": 15,
-        "102": 15,
-        "103": 15,
+        "101": 16,
+        "102": 16,
+        "103": 16,
         "104": 25,
         "105": 25,
         "106": 25,
@@ -6587,7 +6587,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775739834018,
+  "lastModified": 1775740476944,
   "royaltyPayments": [],
   "labours": [
     {
