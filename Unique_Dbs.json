@@ -1834,7 +1834,8 @@
       ],
       "billTotal": 102920,
       "prevBal": 832331.8999999999,
-      "finalPayable": 935251.8999999999
+      "finalPayable": 935251.8999999999,
+      "notes": "Via ALtaf ka larka"
     },
     {
       "inv": 1086,
@@ -1891,7 +1892,8 @@
       "billTotal": 56402.5,
       "prevBal": 725542.5,
       "finalPayable": 781945,
-      "lastModified": 1775625246076
+      "lastModified": 1775625246076,
+      "notes": "Via Murad"
     },
     {
       "inv": 1085,
@@ -6622,7 +6624,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775745067300,
+  "lastModified": 1775745087821,
   "royaltyPayments": [],
   "labours": [
     {
