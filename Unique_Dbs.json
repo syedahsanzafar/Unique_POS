@@ -1299,7 +1299,8 @@
       ],
       "billTotal": 104390,
       "prevBal": 935251.8999999999,
-      "finalPayable": 1039641.8999999999
+      "finalPayable": 1039641.8999999999,
+      "notes": "200 Home 6 pending"
     },
     {
       "inv": 1097,
@@ -6612,7 +6613,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775744882002,
+  "lastModified": 1775744898182,
   "royaltyPayments": [],
   "labours": [
     {
