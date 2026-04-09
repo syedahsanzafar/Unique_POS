@@ -2503,7 +2503,8 @@
       ],
       "billTotal": 24675,
       "prevBal": 0,
-      "finalPayable": 24675
+      "finalPayable": 24675,
+      "notes": "via 5 star murad"
     },
     {
       "inv": 1075,
@@ -6628,7 +6629,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775745137787,
+  "lastModified": 1775745159591,
   "royaltyPayments": [],
   "labours": [
     {
