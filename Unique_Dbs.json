@@ -666,7 +666,7 @@
       "id": 1774678162655,
       "name": "Mujahid Book Depot Nakyal",
       "phone": "",
-      "balance": 37012.5,
+      "balance": -0.5,
       "discounts": {}
     },
     {
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/9/2026, 7:24:17 PM",
+      "customer": "Mujahid Book Depot Nakyal",
+      "amount": 37013,
+      "ref": "FB online"
+    },
     {
       "date": "4/9/2026, 7:24:03 PM",
       "customer": "College Book Depot Kotli",
@@ -6593,7 +6599,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775744643604,
+  "lastModified": 1775744657523,
   "royaltyPayments": [],
   "labours": [
     {
