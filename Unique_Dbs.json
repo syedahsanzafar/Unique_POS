@@ -416,7 +416,7 @@
     {
       "id": 216,
       "name": "College Book Depot Kotli",
-      "balance": 26350,
+      "balance": 26040,
       "discounts": {
         "101": 16,
         "102": 16,
@@ -1131,36 +1131,34 @@
       "date": "4/9/2026",
       "items": [
         {
+          "id": 101,
           "name": "HOME ECONOMICS 6",
           "rate": 200,
           "qty": 50,
-          "disc": 15,
-          "total": 8500,
-          "id": 101,
-          "bundles": 1
+          "disc": 16,
+          "total": 8400
         },
         {
+          "id": 102,
           "name": "HOME ECONOMICS 7",
           "rate": 180,
           "qty": 50,
-          "disc": 15,
-          "total": 7650,
-          "id": 102,
-          "bundles": 1
+          "disc": 16,
+          "total": 7560
         },
         {
+          "id": 103,
           "name": "HOME ECONOMICS 8",
           "rate": 240,
           "qty": 50,
-          "disc": 15,
-          "total": 10200,
-          "id": 103,
-          "bundles": 1
+          "disc": 16,
+          "total": 10080
         }
       ],
-      "billTotal": 26350,
+      "billTotal": 26040,
       "prevBal": 0,
-      "finalPayable": 26350
+      "finalPayable": 26040,
+      "lastModified": 1775740551765
     },
     {
       "inv": 1100,
@@ -6587,7 +6585,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775740476944,
+  "lastModified": 1775740552081,
   "royaltyPayments": [],
   "labours": [
     {
