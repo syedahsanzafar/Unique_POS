@@ -1329,7 +1329,8 @@
       ],
       "billTotal": 18542,
       "prevBal": 781945,
-      "finalPayable": 800487
+      "finalPayable": 800487,
+      "notes": "Via Murad"
     },
     {
       "inv": 1096,
@@ -1367,7 +1368,8 @@
       ],
       "billTotal": 64032,
       "prevBal": 2349388,
-      "finalPayable": 2413420
+      "finalPayable": 2413420,
+      "notes": "via Un ka Apna Mazdur"
     },
     {
       "inv": 1095,
@@ -6613,7 +6615,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775744898182,
+  "lastModified": 1775744937881,
   "royaltyPayments": [],
   "labours": [
     {
