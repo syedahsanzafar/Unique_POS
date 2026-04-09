@@ -1492,7 +1492,8 @@
       "billTotal": 37400,
       "prevBal": 101200,
       "finalPayable": 138600,
-      "lastModified": 1775726584574
+      "lastModified": 1775726584574,
+      "notes": "with Awami book mzd maal Via Shafique Lari Adda"
     },
     {
       "inv": 1093,
@@ -1566,7 +1567,8 @@
       ],
       "billTotal": 62575,
       "prevBal": 124160,
-      "finalPayable": 186735
+      "finalPayable": 186735,
+      "notes": "Via SHafique mazdur lari adda"
     },
     {
       "inv": 1092,
@@ -1613,7 +1615,8 @@
       ],
       "billTotal": 142128,
       "prevBal": 2207260,
-      "finalPayable": 2349388
+      "finalPayable": 2349388,
+      "notes": "Via un ka apna mazdur"
     },
     {
       "inv": 1091,
@@ -1678,7 +1681,8 @@
       ],
       "billTotal": 36225,
       "prevBal": 36225,
-      "finalPayable": 72450
+      "finalPayable": 72450,
+      "notes": "Via Javed"
     },
     {
       "inv": 1090,
@@ -1743,7 +1747,8 @@
       ],
       "billTotal": 36225,
       "prevBal": 0,
-      "finalPayable": 36225
+      "finalPayable": 36225,
+      "notes": "Via Murad"
     },
     {
       "inv": 1088,
@@ -1790,7 +1795,8 @@
       ],
       "billTotal": 24675,
       "prevBal": 0,
-      "finalPayable": 24675
+      "finalPayable": 24675,
+      "notes": "Via Murad"
     },
     {
       "inv": 1087,
@@ -6616,7 +6622,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775744956610,
+  "lastModified": 1775745067300,
   "royaltyPayments": [],
   "labours": [
     {
