@@ -165,6 +165,13 @@
       "phone": "923454101107"
     },
     {
+      "id": 1775723806119,
+      "name": "Ahsan Book Depot Hatiyan Bala",
+      "phone": "03453494234",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 1766668447918,
       "name": "AJK TEXTBOOK BOARD",
       "balance": 430973,
@@ -392,7 +399,7 @@
     {
       "id": 215,
       "name": "City Book Depot Mirpur",
-      "balance": 739641.8999999999,
+      "balance": 1039641.8999999999,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -851,12 +858,6 @@
     }
   ],
   "payments": [
-    {
-      "date": "4/8/2026, 6:28:06 PM",
-      "customer": "City Book Depot Mirpur",
-      "amount": 300000,
-      "ref": "Fb online"
-    },
     {
       "date": "4/8/2026, 3:24:59 PM",
       "customer": "Amir Book Depot Hajira",
@@ -6453,7 +6454,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775654976778,
+  "lastModified": 1775723806234,
   "royaltyPayments": [],
   "labours": [
     {
