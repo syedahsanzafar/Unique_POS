@@ -1940,7 +1940,8 @@
       ],
       "billTotal": 24675,
       "prevBal": 0,
-      "finalPayable": 24675
+      "finalPayable": 24675,
+      "notes": "Via Murad 5 star"
     },
     {
       "inv": 1084,
@@ -1987,7 +1988,8 @@
       ],
       "billTotal": 35259,
       "prevBal": 97764,
-      "finalPayable": 133023
+      "finalPayable": 133023,
+      "notes": "Via Javed"
     },
     {
       "inv": 1083,
@@ -6624,7 +6626,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775745087821,
+  "lastModified": 1775745114545,
   "royaltyPayments": [],
   "labours": [
     {
