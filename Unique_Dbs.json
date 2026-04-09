@@ -2018,7 +2018,8 @@
       ],
       "billTotal": 49536,
       "prevBal": 2157724,
-      "finalPayable": 2207260
+      "finalPayable": 2207260,
+      "notes": "Via Muzaffar mazdur"
     },
     {
       "inv": 1082,
@@ -2132,7 +2133,8 @@
       "billTotal": 258192,
       "prevBal": 860043,
       "finalPayable": 1118235,
-      "lastModified": 1775624922028
+      "lastModified": 1775624922028,
+      "notes": "Via Javed"
     },
     {
       "inv": 1080,
@@ -6626,7 +6628,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775745114545,
+  "lastModified": 1775745137787,
   "royaltyPayments": [],
   "labours": [
     {
