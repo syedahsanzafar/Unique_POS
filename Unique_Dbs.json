@@ -399,7 +399,7 @@
     {
       "id": 215,
       "name": "City Book Depot Mirpur",
-      "balance": 1096081.9,
+      "balance": 796081.8999999999,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/11/2026, 4:19:50 AM",
+      "customer": "City Book Depot Mirpur",
+      "amount": 300000,
+      "ref": "Fb online"
+    },
     {
       "date": "4/11/2026, 4:17:20 AM",
       "customer": "Khurshid Sons Book Depot Abaspur",
@@ -6703,7 +6709,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775863085481,
+  "lastModified": 1775863191181,
   "royaltyPayments": [],
   "labours": [
     {
