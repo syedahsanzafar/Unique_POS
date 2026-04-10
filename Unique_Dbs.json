@@ -283,7 +283,7 @@
     {
       "id": 1766667470611,
       "name": "Azad Book Depot Bhimber",
-      "balance": 2413420,
+      "balance": 2113420,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -399,7 +399,7 @@
     {
       "id": 215,
       "name": "City Book Depot Mirpur",
-      "balance": 239641.8999999999,
+      "balance": 1039641.8999999999,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -666,7 +666,7 @@
       "id": 1774678162655,
       "name": "Mujahid Book Depot Nakyal",
       "phone": "",
-      "balance": -0.5,
+      "balance": 12.5,
       "discounts": {}
     },
     {
@@ -859,28 +859,22 @@
   ],
   "payments": [
     {
-      "date": "4/9/2026, 7:24:57 PM",
-      "customer": "City Book Depot Mirpur",
-      "amount": 500000,
-      "ref": "FB online"
-    },
-    {
-      "date": "4/9/2026, 7:24:44 PM",
-      "customer": "City Book Depot Mirpur",
+      "date": "4/10/2026, 12:01:44 PM",
+      "customer": "Azad Book Depot Bhimber",
       "amount": 300000,
-      "ref": "FB online"
+      "ref": "HBL Moh bhai"
     },
     {
-      "date": "4/9/2026, 7:24:17 PM",
+      "date": "4/9/2026, 7:16:29 PM",
       "customer": "Mujahid Book Depot Nakyal",
-      "amount": 37013,
-      "ref": "FB online"
+      "amount": 37000,
+      "ref": "Fb online"
     },
     {
-      "date": "4/9/2026, 7:24:03 PM",
+      "date": "4/9/2026, 7:16:08 PM",
       "customer": "College Book Depot Kotli",
       "amount": 26040,
-      "ref": "FB online"
+      "ref": "Fb online"
     },
     {
       "date": "4/8/2026, 3:24:59 PM",
@@ -1155,36 +1149,34 @@
       "date": "4/9/2026",
       "items": [
         {
+          "id": 101,
           "name": "HOME ECONOMICS 6",
           "rate": 200,
           "qty": 50,
           "disc": 16,
-          "total": 8400,
-          "id": 101,
-          "bundles": 1
+          "total": 8400
         },
         {
+          "id": 102,
           "name": "HOME ECONOMICS 7",
           "rate": 180,
           "qty": 50,
           "disc": 16,
-          "total": 7560,
-          "id": 102,
-          "bundles": 1
+          "total": 7560
         },
         {
+          "id": 103,
           "name": "HOME ECONOMICS 8",
           "rate": 240,
           "qty": 50,
           "disc": 16,
-          "total": 10080,
-          "id": 103,
-          "bundles": 1
+          "total": 10080
         }
       ],
       "billTotal": 26040,
       "prevBal": 0,
-      "finalPayable": 26040
+      "finalPayable": 26040,
+      "lastModified": 1775740551765
     },
     {
       "inv": 1100,
@@ -1213,8 +1205,7 @@
       ],
       "billTotal": 12337.5,
       "prevBal": 24675,
-      "finalPayable": 37012.5,
-      "notes": "via Amjad"
+      "finalPayable": 37012.5
     },
     {
       "inv": 1099,
@@ -1299,8 +1290,7 @@
       ],
       "billTotal": 104390,
       "prevBal": 935251.8999999999,
-      "finalPayable": 1039641.8999999999,
-      "notes": "200 Home 6 pending"
+      "finalPayable": 1039641.8999999999
     },
     {
       "inv": 1097,
@@ -1329,8 +1319,7 @@
       ],
       "billTotal": 18542,
       "prevBal": 781945,
-      "finalPayable": 800487,
-      "notes": "Via Murad"
+      "finalPayable": 800487
     },
     {
       "inv": 1096,
@@ -1368,8 +1357,7 @@
       ],
       "billTotal": 64032,
       "prevBal": 2349388,
-      "finalPayable": 2413420,
-      "notes": "via Un ka Apna Mazdur"
+      "finalPayable": 2413420
     },
     {
       "inv": 1095,
@@ -1461,8 +1449,7 @@
       ],
       "billTotal": 24695,
       "prevBal": 192.5,
-      "finalPayable": 24887.5,
-      "notes": "via Murad"
+      "finalPayable": 24887.5
     },
     {
       "inv": 1094,
@@ -1492,8 +1479,7 @@
       "billTotal": 37400,
       "prevBal": 101200,
       "finalPayable": 138600,
-      "lastModified": 1775726584574,
-      "notes": "with Awami book mzd maal Via Shafique Lari Adda"
+      "lastModified": 1775726584574
     },
     {
       "inv": 1093,
@@ -1567,8 +1553,7 @@
       ],
       "billTotal": 62575,
       "prevBal": 124160,
-      "finalPayable": 186735,
-      "notes": "Via SHafique mazdur lari adda"
+      "finalPayable": 186735
     },
     {
       "inv": 1092,
@@ -1615,8 +1600,7 @@
       ],
       "billTotal": 142128,
       "prevBal": 2207260,
-      "finalPayable": 2349388,
-      "notes": "Via un ka apna mazdur"
+      "finalPayable": 2349388
     },
     {
       "inv": 1091,
@@ -1681,8 +1665,7 @@
       ],
       "billTotal": 36225,
       "prevBal": 36225,
-      "finalPayable": 72450,
-      "notes": "Via Javed"
+      "finalPayable": 72450
     },
     {
       "inv": 1090,
@@ -1747,8 +1730,7 @@
       ],
       "billTotal": 36225,
       "prevBal": 0,
-      "finalPayable": 36225,
-      "notes": "Via Murad"
+      "finalPayable": 36225
     },
     {
       "inv": 1088,
@@ -1795,8 +1777,7 @@
       ],
       "billTotal": 24675,
       "prevBal": 0,
-      "finalPayable": 24675,
-      "notes": "Via Murad"
+      "finalPayable": 24675
     },
     {
       "inv": 1087,
@@ -1834,8 +1815,7 @@
       ],
       "billTotal": 102920,
       "prevBal": 832331.8999999999,
-      "finalPayable": 935251.8999999999,
-      "notes": "Via ALtaf ka larka"
+      "finalPayable": 935251.8999999999
     },
     {
       "inv": 1086,
@@ -1892,8 +1872,7 @@
       "billTotal": 56402.5,
       "prevBal": 725542.5,
       "finalPayable": 781945,
-      "lastModified": 1775625246076,
-      "notes": "Via Murad"
+      "lastModified": 1775625246076
     },
     {
       "inv": 1085,
@@ -1940,8 +1919,7 @@
       ],
       "billTotal": 24675,
       "prevBal": 0,
-      "finalPayable": 24675,
-      "notes": "Via Murad 5 star"
+      "finalPayable": 24675
     },
     {
       "inv": 1084,
@@ -1988,8 +1966,7 @@
       ],
       "billTotal": 35259,
       "prevBal": 97764,
-      "finalPayable": 133023,
-      "notes": "Via Javed"
+      "finalPayable": 133023
     },
     {
       "inv": 1083,
@@ -2018,8 +1995,7 @@
       ],
       "billTotal": 49536,
       "prevBal": 2157724,
-      "finalPayable": 2207260,
-      "notes": "Via Muzaffar mazdur"
+      "finalPayable": 2207260
     },
     {
       "inv": 1082,
@@ -2133,8 +2109,7 @@
       "billTotal": 258192,
       "prevBal": 860043,
       "finalPayable": 1118235,
-      "lastModified": 1775624922028,
-      "notes": "Via Javed"
+      "lastModified": 1775624922028
     },
     {
       "inv": 1080,
@@ -2226,8 +2201,7 @@
       ],
       "billTotal": 62575,
       "prevBal": 0,
-      "finalPayable": 62575,
-      "notes": "via javed"
+      "finalPayable": 62575
     },
     {
       "inv": 1079,
@@ -2318,8 +2292,7 @@
       "billTotal": 134510,
       "prevBal": 0,
       "finalPayable": 134510,
-      "lastModified": 1774967622163,
-      "notes": "via javed"
+      "lastModified": 1774967622163
     },
     {
       "inv": 1078,
@@ -2393,8 +2366,7 @@
       ],
       "billTotal": 166525,
       "prevBal": 34675,
-      "finalPayable": 201200,
-      "notes": "via javed"
+      "finalPayable": 201200
     },
     {
       "inv": 1077,
@@ -2459,8 +2431,7 @@
       ],
       "billTotal": 60900,
       "prevBal": 0,
-      "finalPayable": 60900,
-      "notes": "via murad 5 star"
+      "finalPayable": 60900
     },
     {
       "inv": 1076,
@@ -2507,8 +2478,7 @@
       ],
       "billTotal": 24675,
       "prevBal": 0,
-      "finalPayable": 24675,
-      "notes": "via 5 star murad"
+      "finalPayable": 24675
     },
     {
       "inv": 1075,
@@ -2555,8 +2525,7 @@
       ],
       "billTotal": 72051,
       "prevBal": -100000,
-      "finalPayable": -27949,
-      "notes": "via javed"
+      "finalPayable": -27949
     },
     {
       "inv": 1074,
@@ -6634,7 +6603,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775745188247,
+  "lastModified": 1775804524414,
   "royaltyPayments": [],
   "labours": [
     {
