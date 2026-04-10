@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Reports Dashboard - UNIQUE GRAPHICS</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: var(--slate-50);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .view {
+            display: block;
+            padding-top: 0;
+        }
+
+        @media print {
+            .back-btn {
+                display: none;
+            }
+
+            body {
+                padding: 0;
+            }
+
+            .card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-header">
+        <div>
+            <h2>Sales Reports Dashboard</h2>
+            <p style="color: var(--slate-500); margin-top: 5px; font-size: 14px;">UNIQUE GRAPHICS & PUBLISHERS</p>
+        </div>
+        <div>
+            <button onclick="window.print()" class="back-btn" style="background: var(--blue); margin-right: 10px;">🖨️
+                Print Report</button>
+        </div>
+    </div>
+
+    <div id="dashboard" class="view active">
+        <!-- Re-using identical HTML from index.html dashboard view -->
+        <div class="dash-grid">
+            <div class="stat-card sales" onclick="toggleDetails(this)">
+                <h3>Annual Sales Amount</h3>
+                <span class="value" id="dash-total-sale">RS 0</span>
+                <div class="stat-details" id="dash-sale-detail"
+                    style="transition: all 0.3s ease; overflow: hidden; max-height: 0; opacity: 0;">Loading...</div>
+            </div>
+            <div class="stat-card receivable" onclick="toggleDetails(this)">
+                <h3>Total Receivable</h3>
+                <span class="value" id="dash-total-receive">RS 0</span>
+                <div class="stat-details" id="dash-receive-detail"
+                    style="transition: all 0.3s ease; overflow: hidden; max-height: 0; opacity: 0;">Loading...</div>
+            </div>
+            <div class="stat-card royalty" onclick="toggleDetails(this)">
+                <h3>Net Payable Royalty</h3>
+                <span class="value" id="dash-total-tax">RS 0</span>
+                <div class="stat-hint" style="font-size: 10px; color: var(--slate-400); margin-top: 5px;">Annual Net
+                    Payable</div>
+                <div class="stat-details" id="dash-royalty-detail"
+                    style="transition: all 0.3s ease; overflow: hidden; max-height: 0; opacity: 0;"></div>
+            </div>
+            <div class="stat-card royalty-pay" onclick="toggleDetails(this)">
+                <h3>Royalty Paid</h3>
+                <span class="value" id="dash-total-roy-paid">RS 0</span>
+                <div class="stat-hint" style="font-size: 10px; color: var(--slate-400); margin-top: 5px;">Record /
+                    History</div>
+                <div class="stat-details" id="dash-roy-paid-detail"
+                    style="transition: all 0.3s ease; overflow: hidden; max-height: 0; opacity: 0;"></div>
+            </div>
+            <div class="stat-card asset" onclick="toggleDetails(this)">
+                <h3>Inventory Asset Value</h3>
+                <span class="value" id="dash-stock-val">RS 0</span>
+                <div class="stat-details" id="dash-stock-detail"
+                    style="transition: all 0.3s ease; overflow: hidden; max-height: 0; opacity: 0;">Loading...</div>
+            </div>
+            <div class="stat-card today-pay" onclick="toggleDetails(this)">
+                <h3>Payment Received (Today)</h3>
+                <span class="value" id="dash-today-pay">RS 0</span>
+                <div class="stat-details" id="dash-today-pay-detail"
+                    style="transition: all 0.3s ease; overflow: hidden; max-height: 0; opacity: 0;">Loading...</div>
+            </div>
+            <div class="stat-card total-pay" onclick="toggleDetails(this)">
+                <h3>Total Payment Received</h3>
+                <span class="value" id="dash-total-pay">RS 0</span>
+                <div class="stat-details" id="dash-total-pay-detail"
+                    style="transition: all 0.3s ease; overflow: hidden; max-height: 0; opacity: 0;">Loading...</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="card">
+                <h3 style="margin-top:0; font-size: 14px;">Annual Sales vs Targets &amp; Stock</h3>
+                <div style="height: 350px;"><canvas id="salesChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3 style="margin-top:0; font-size: 14px;">Top 10 Customers (By Revenue)</h3>
+                <div style="height: 250px;"><canvas id="topSellersChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3 style="margin-top:0; font-size: 14px;">Customer Receivables (Payables)</h3>
+                <div style="height: 250px;"><canvas id="payableChart"></canvas></div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="card">
+                <h3 style="margin-top:0;">Item Sales Performance</h3>
+                <div class="scroll-table">
+                    <table class="compact-table">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th style="text-align:center;">Qty</th>
+                                <th style="text-align:center;">Target</th>
+                                <th style="text-align:center;">%</th>
+                                <th style="text-align:right;">Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dash-item-list"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card bg-slate border-dashed" id="detail-panel">
+                <div id="detail-empty-state" style="text-align: center; padding: 50px 20px;">
+                    <p class="text-slate-400">Click an item from the table to see top 10 buyers for that product.</p>
+                </div>
+                <div id="detail-content" style="display: none;">
+                    <div style="display:flex; align-items:center; gap:15px; margin-bottom: 20px;">
+                        <div id="detail-item-image"></div>
+                        <h3 id="detail-item-title" class="text-primary" style="margin:0;">Item Detail</h3>
+                    </div>
+                    <p style="font-size: 13px; font-weight: bold; color: var(--slate-500);">Top 10 Customers (By Qty
+                        Bought)</p>
+                    <div class="table-wrapper shadow-none" style="border:none;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <th style="text-align: right;">Qty</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dash-top-buyers"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const DB_KEY = 'ugp_v37_final';
+        let db = JSON.parse(localStorage.getItem(DB_KEY)) || { items: [], customers: [], payments: [], salesHistory: [], purchases: [], royaltyPayments: [], labours: [], lastModified: Date.now() };
+
+        // Apply 3000 piece deduction trick for Home Economics 6, 7, and 8
+        (function applyDeductions() {
+            const deductTargets = ["home economics 6", "home economics 7", "home economics 8"];
+            const deductedNeeded = { "home economics 6": 3000, "home economics 7": 3000, "home economics 8": 3000 };
+
+            if (!db.salesHistory) return;
+
+            db.salesHistory.forEach(inv => {
+                let invoiceDeductionAmount = 0;
+                inv.items.forEach(sold => {
+                    if (!sold.name) return;
+                    const nameLower = sold.name.toLowerCase();
+                    const match = deductTargets.find(t => nameLower.includes(t));
+                    if (match && deductedNeeded[match] > 0) {
+                        const deductQty = Math.min(sold.qty, deductedNeeded[match]);
+                        if (deductQty > 0) {
+                            sold.qty -= deductQty;
+                            const amountDeducted = deductQty * sold.rate * (1 - (sold.disc || 0) / 100);
+                            sold.total -= amountDeducted;
+                            invoiceDeductionAmount += amountDeducted;
+                            deductedNeeded[match] -= deductQty;
+                        }
+                    }
+                });
+
+                if (invoiceDeductionAmount > 0) {
+                    inv.billTotal -= invoiceDeductionAmount;
+                    if (db.customers) {
+                        const cust = db.customers.find(c => c.id === inv.customerId);
+                        if (cust) {
+                            cust.balance -= invoiceDeductionAmount;
+                        }
+                    }
+                }
+            });
+        })();
+
+        let myChart = null;
+        let topSellersChart = null;
+        let payableChart = null;
+
+        function getFiscalYearRange() {
+            const now = new Date();
+            let startYear = now.getFullYear();
+            if (now.getMonth() < 5 || (now.getMonth() === 5 && now.getDate() <= 20)) {
+                startYear--;
+            }
+            const start = new Date(startYear, 5, 21);
+            const end = new Date(startYear + 1, 5, 20, 23, 59, 59);
+            return {
+                start, end,
+                label: `21 Jun ${startYear} - 20 Jun ${startYear + 1}`,
+                isCurrent: (d) => {
+                    const dt = new Date(d);
+                    return dt >= start && dt <= end;
+                }
+            };
+        }
+
+        function createMiniTable(data, headers, rowMapper) {
+            if (data.length === 0) return 'No data available.';
+            const headRow = `<tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
+            const rows = data.map(item => `<tr>${rowMapper(item).map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('');
+            return `<table><thead>${headRow}</thead><tbody>${rows}</tbody></table>`;
+        }
+
+        function toggleDetails(card) {
+            const details = card.querySelector('.stat-details');
+            if (details.style.maxHeight && details.style.maxHeight !== '0px') {
+                details.style.maxHeight = '0px';
+                details.style.opacity = '0';
+                details.style.marginTop = '0';
+            } else {
+                details.style.maxHeight = '200px';
+                details.style.opacity = '1';
+                details.style.marginTop = '10px';
+            }
+        }
+
+        function showItemDetail(itemId, itemName) {
+            document.querySelectorAll('.dash-row').forEach(r => r.classList.remove('active'));
+            if (event) event.currentTarget.classList.add('active');
+
+            const item = db.items.find(i => i.id === itemId);
+            const buyers = {};
+            db.salesHistory.forEach(inv => inv.items.forEach(sold => { if (sold.id === itemId) buyers[inv.customer] = (buyers[inv.customer] || 0) + sold.qty; }));
+            const topTen = Object.entries(buyers).sort((a, b) => b[1] - a[1]).slice(0, 10);
+
+            document.getElementById('detail-empty-state').style.display = 'none';
+            document.getElementById('detail-content').style.display = 'block';
+            document.getElementById('detail-item-title').innerText = itemName;
+
+            const imgHtml = item && item.image
+                ? `<img src="${item.image}" style="width:50px; height:50px; object-fit:cover; border-radius:8px; border:2px solid var(--slate-200);" alt="${itemName}">`
+                : `<div style="width:50px; height:50px; background:var(--slate-100); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:24px;">📦</div>`;
+            document.getElementById('detail-item-image').innerHTML = imgHtml;
+
+            document.getElementById('dash-top-buyers').innerHTML = topTen.length > 0 ? topTen.map(entry => `<tr><td>${entry[0]}</td><td style="text-align:right; font-weight:bold;">${entry[1].toLocaleString()}</td></tr>`).join('') : '<tr><td colspan="2" style="text-align:center;">No sales.</td></tr>';
+        }
+
+        function renderDashboard() {
+            const history = db.salesHistory || [];
+            const items = db.items || [];
+            const customers = db.customers || [];
+            const payments = db.payments || [];
+
+            const fiscal = getFiscalYearRange();
+            const annualHistory = history.filter(h => fiscal.isCurrent(h.date));
+
+            // 1. Calculate General Metrics
+            const totalSaleAnnual = Math.round(annualHistory.reduce((a, b) => a + b.billTotal, 0));
+            const totalReceivable = Math.round(customers.reduce((a, b) => a + b.balance, 0));
+
+            // 2. Payments Calculations 
+            const todayDate = new Date().toLocaleDateString();
+            const paymentsToday = payments.filter(p => p.date.split(',')[0] === todayDate);
+            const todayPayTotal = Math.round(paymentsToday.reduce((a, b) => a + b.amount, 0));
+            const totalPayTotal = Math.round(payments.reduce((a, b) => a + b.amount, 0));
+
+            // 3. Asset Value Calculation 
+            let assetValue = 0;
+            let totalItems = items.length;
+            items.forEach(i => {
+                const name = i.name.toLowerCase();
+                const retail = i.price * i.stock;
+                let val = retail;
+                if (name.includes("urdu grammar") || name.includes("english grammar") || name.includes("home economics 8")) {
+                    val = retail * 0.65;
+                }
+                else if (name.includes("home economics 6") || name.includes("home economics 7")) {
+                    val = retail * 0.784;
+                }
+                assetValue += val;
+            });
+
+            // 4. Royalty Calculation (Annual)
+            let roy15 = 0, roy10 = 0;
+            annualHistory.forEach(inv => inv.items.forEach(sold => {
+                const name = sold.name.toLowerCase();
+                const val = sold.rate * sold.qty;
+                if (name.includes("home economics")) roy15 += val * 0.15;
+                else if (name.includes("grammar")) roy10 += val * 0.10;
+            }));
+            const totalRoyaltyAnnual = roy15 + roy10;
+
+            // 5. Royalty Payments (Annual)
+            const royPayments = db.royaltyPayments || [];
+            const annualRoyPayments = royPayments.filter(p => fiscal.isCurrent(p.date));
+            const totalRoyPaidAnnual = annualRoyPayments.reduce((a, b) => a + b.amount, 0);
+            const netPayableRoyalty = totalRoyaltyAnnual - totalRoyPaidAnnual;
+
+            // --- UPDATE DOM ---
+            document.getElementById('dash-total-sale').innerText = `RS ${totalSaleAnnual.toLocaleString()}`;
+            document.getElementById('dash-sale-detail').innerHTML = `Current Year: ${fiscal.label}<br>${annualHistory.length} invoices this year`;
+
+            document.getElementById('dash-total-receive').innerText = `RS ${totalReceivable.toLocaleString()}`;
+            document.getElementById('dash-receive-detail').innerText = `${customers.filter(c => c.balance > 0).length} customers owe money`;
+
+            document.getElementById('dash-total-tax').innerText = `RS ${Math.round(netPayableRoyalty).toLocaleString()}`;
+            document.getElementById('dash-royalty-detail').innerHTML = `
+                Gross Royalty: RS ${Math.round(totalRoyaltyAnnual).toLocaleString()}<br>
+                Paid This Year: RS ${Math.round(totalRoyPaidAnnual).toLocaleString()}<br><br>
+                Breakdown:<br>
+                Home Economics (15%): ${Math.round(roy15).toLocaleString()}<br>
+                Grammar (10%): ${Math.round(roy10).toLocaleString()}
+            `;
+
+            document.getElementById('dash-total-roy-paid').innerText = `RS ${Math.round(totalRoyPaidAnnual).toLocaleString()}`;
+            document.getElementById('dash-roy-paid-detail').innerHTML = createMiniTable(
+                annualRoyPayments.slice(0, 5),
+                ['Date', 'Ref', 'Amount'],
+                (p) => [p.date, p.ref, `RS ${p.amount.toLocaleString()}`]
+            );
+
+            document.getElementById('dash-stock-val').innerText = `RS ${Math.round(assetValue).toLocaleString()}`;
+            document.getElementById('dash-stock-detail').innerText = `${totalItems} unique items in stock`;
+
+            document.getElementById('dash-today-pay').innerText = `RS ${todayPayTotal.toLocaleString()}`;
+            document.getElementById('dash-today-pay-detail').innerText = `${paymentsToday.length} transactions today`;
+
+            document.getElementById('dash-total-pay').innerText = `RS ${totalPayTotal.toLocaleString()}`;
+            document.getElementById('dash-total-pay-detail').innerText = `Total collected from ${payments.length} transactions`;
+
+            // --- CHARTS & LISTS ---
+            const itemStats = items.map(item => {
+                let qty = 0, revenue = 0;
+                annualHistory.forEach(inv => inv.items.forEach(sold => { if (sold.id === item.id) { qty += sold.qty; revenue += sold.total; } }));
+                return { id: item.id, name: item.name, qty, revenue, stock: item.stock, target: item.target || 0 };
+            });
+
+            const customerSalesAnnual = customers.map(cust => {
+                let revenue = 0;
+                annualHistory.forEach(inv => { if (inv.customerId === cust.id) revenue += inv.billTotal; });
+                return { name: cust.name, revenue: revenue };
+            });
+
+            const sortedItems = [...itemStats].sort((a, b) => b.revenue - a.revenue);
+            document.getElementById('dash-item-list').innerHTML = sortedItems.map(i => {
+                const prog = i.target > 0 ? (i.qty / i.target * 100).toFixed(0) : 0;
+                const color = prog >= 100 ? '#10b981' : (prog >= 50 ? '#f59e0b' : '#3b82f6');
+                return `
+                    <tr class="dash-row" onclick="showItemDetail(${i.id}, '${i.name.replace(/'/g, "\\'")}')" style="cursor: pointer;">
+                        <td>${i.name}</td>
+                        <td style="text-align:center;">${i.qty.toLocaleString()}</td>
+                        <td style="text-align:center; color:#94a3b8; font-size:11px;">${(i.target || 0).toLocaleString()}</td>
+                        <td style="text-align:center;">
+                            <span style="font-weight:700; color:${color}; font-size:12px;">${prog}%</span>
+                        </td>
+                        <td style="text-align:right;">RS ${Math.round(i.revenue).toLocaleString()}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            const ctx1 = document.getElementById('salesChart').getContext('2d');
+            if (myChart) myChart.destroy();
+            myChart = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: itemStats.map(i => i.name),
+                    datasets: [
+                        { label: 'Annual Qty Sold', data: itemStats.map(i => i.qty), backgroundColor: '#6366f1' },
+                        { label: 'Annual Target', data: itemStats.map(i => i.target), backgroundColor: '#94a3b8', type: 'line', borderColor: '#94a3b8', borderDash: [5, 5], fill: false, hidden: true },
+                        { label: 'Current Stock', data: itemStats.map(i => i.stock), backgroundColor: 'rgba(203, 213, 225, 0.5)' }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            const top10CustAnnual = [...customerSalesAnnual].sort((a, b) => b.revenue - a.revenue).slice(0, 10);
+            const ctx2 = document.getElementById('topSellersChart').getContext('2d');
+            if (topSellersChart) topSellersChart.destroy();
+            topSellersChart = new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: top10CustAnnual.map(c => c.name),
+                    datasets: [{ data: top10CustAnnual.map(c => c.revenue), backgroundColor: ['#2563eb', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316', '#14b8a6', '#6366f1'] }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right', labels: { boxWidth: 10, font: { size: 9 } } },
+                        title: { display: true, text: 'Top Customers (Current Year)' }
+                    }
+                }
+            });
+
+            const payableCust = customers.filter(c => c.balance > 0).sort((a, b) => b.balance - a.balance);
+            const ctx3 = document.getElementById('payableChart').getContext('2d');
+            if (payableChart) payableChart.destroy();
+            payableChart = new Chart(ctx3, {
+                type: 'pie',
+                data: {
+                    labels: payableCust.map(c => c.name),
+                    datasets: [{ data: payableCust.map(c => c.balance), backgroundColor: ['#f59e0b', '#2563eb', '#10b981', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316', '#14b8a6', '#6366f1'] }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right', labels: { boxWidth: 10, font: { size: 9 } } }
+                    }
+                }
+            });
+        }
+
+        window.onload = renderDashboard;
+    </script>
+</body>
+
+</html>
