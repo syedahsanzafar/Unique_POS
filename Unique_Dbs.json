@@ -399,7 +399,7 @@
     {
       "id": 215,
       "name": "City Book Depot Mirpur",
-      "balance": 796081.8999999999,
+      "balance": 296081.8999999999,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/11/2026, 4:20:14 AM",
+      "customer": "City Book Depot Mirpur",
+      "amount": 500000,
+      "ref": "Fb online"
+    },
     {
       "date": "4/11/2026, 4:19:50 AM",
       "customer": "City Book Depot Mirpur",
@@ -6709,7 +6715,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775863191181,
+  "lastModified": 1775863214594,
   "royaltyPayments": [],
   "labours": [
     {
