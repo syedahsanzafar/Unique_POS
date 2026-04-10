@@ -607,7 +607,7 @@
     {
       "id": 225,
       "name": "Khurshid Sons Book Depot Abaspur",
-      "balance": 824.5,
+      "balance": -0.5,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/11/2026, 4:17:20 AM",
+      "customer": "Khurshid Sons Book Depot Abaspur",
+      "amount": 825,
+      "ref": "Online"
+    },
     {
       "date": "4/10/2026, 12:01:44 PM",
       "customer": "Azad Book Depot Bhimber",
@@ -6697,7 +6703,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775812154247,
+  "lastModified": 1775863085481,
   "royaltyPayments": [],
   "labours": [
     {
