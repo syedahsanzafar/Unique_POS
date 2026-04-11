@@ -666,7 +666,7 @@
       "id": 1774678162655,
       "name": "Mujahid Book Depot Nakyal",
       "phone": "",
-      "balance": 12350,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/11/2026, 4:11:47 PM",
+      "customer": "Mujahid Book Depot Nakyal",
+      "amount": 12350,
+      "ref": "FB online"
+    },
     {
       "date": "4/11/2026, 4:20:14 AM",
       "customer": "City Book Depot Mirpur",
@@ -6821,7 +6827,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775905607209,
+  "lastModified": 1775905907824,
   "royaltyPayments": [],
   "labours": [
     {
