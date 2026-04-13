@@ -1336,7 +1336,8 @@
       "billTotal": 24675,
       "prevBal": 217350,
       "finalPayable": 242025,
-      "lastModified": 1775891406417
+      "lastModified": 1775891406417,
+      "notes": "Via Murad"
     },
     {
       "inv": 1103,
@@ -1401,7 +1402,8 @@
       ],
       "billTotal": 148872,
       "prevBal": 2113420,
-      "finalPayable": 2262292
+      "finalPayable": 2262292,
+      "notes": "Apna Mazdur le gaya"
     },
     {
       "inv": 1102,
@@ -6893,7 +6895,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776072902890,
+  "lastModified": 1776072921557,
   "royaltyPayments": [],
   "labours": [
     {
