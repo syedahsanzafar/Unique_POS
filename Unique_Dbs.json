@@ -382,7 +382,7 @@
     {
       "id": 214,
       "name": "Chaurdary Book Depot Mzd",
-      "balance": 89407.5,
+      "balance": -0.5,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/13/2026, 9:42:00 AM",
+      "customer": "Chaurdary Book Depot Mzd",
+      "amount": 89408,
+      "ref": "Diamond Cash"
+    },
     {
       "date": "4/11/2026, 4:11:47 PM",
       "customer": "Mujahid Book Depot Nakyal",
@@ -6827,7 +6833,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1775905907824,
+  "lastModified": 1776055357533,
   "royaltyPayments": [],
   "labours": [
     {
