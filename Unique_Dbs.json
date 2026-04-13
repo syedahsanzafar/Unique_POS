@@ -1613,7 +1613,8 @@
       ],
       "billTotal": 18542,
       "prevBal": 781945,
-      "finalPayable": 800487
+      "finalPayable": 800487,
+      "notes": "Via Murad"
     },
     {
       "inv": 1096,
@@ -6897,7 +6898,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776072940236,
+  "lastModified": 1776073033960,
   "royaltyPayments": [],
   "labours": [
     {
