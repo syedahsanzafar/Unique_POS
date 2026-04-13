@@ -1275,7 +1275,8 @@
       ],
       "billTotal": 183168,
       "prevBal": 2019174.4,
-      "finalPayable": 2202342.4
+      "finalPayable": 2202342.4,
+      "notes": "via Ditta"
     },
     {
       "inv": 1105,
@@ -6891,7 +6892,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776072795588,
+  "lastModified": 1776072885365,
   "royaltyPayments": [],
   "labours": [
     {
