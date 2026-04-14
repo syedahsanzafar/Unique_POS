@@ -1208,7 +1208,8 @@
       ],
       "billTotal": 26350,
       "prevBal": 0,
-      "finalPayable": 26350
+      "finalPayable": 26350,
+      "notes": "via altaf"
     },
     {
       "inv": 1111,
@@ -7089,7 +7090,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776158328525,
+  "lastModified": 1776158365199,
   "royaltyPayments": [],
   "labours": [
     {
