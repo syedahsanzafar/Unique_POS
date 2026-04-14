@@ -1420,7 +1420,8 @@
       ],
       "billTotal": 52700,
       "prevBal": 217350,
-      "finalPayable": 270050
+      "finalPayable": 270050,
+      "notes": "via mazdur azad bhimber"
     },
     {
       "inv": 1106,
@@ -7090,7 +7091,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776158365199,
+  "lastModified": 1776158756803,
   "royaltyPayments": [],
   "labours": [
     {
