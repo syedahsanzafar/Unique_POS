@@ -632,7 +632,7 @@
       "id": 1774677693375,
       "name": "Maktaba e Rashidia Plandari",
       "phone": "923418998940",
-      "balance": 39975,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/15/2026, 4:06:58 PM",
+      "customer": "Maktaba e Rashidia Plandari",
+      "amount": 39975,
+      "ref": "FB online"
+    },
     {
       "date": "4/15/2026, 4:06:37 PM",
       "customer": "Ijaz Book Depot Nakyal",
@@ -7292,7 +7298,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776251197462,
+  "lastModified": 1776251218285,
   "royaltyPayments": [],
   "labours": [
     {
