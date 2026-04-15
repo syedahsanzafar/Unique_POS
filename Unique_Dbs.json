@@ -550,7 +550,7 @@
       "id": 1776240699082,
       "name": "Ijaz Book Depot Nakyal",
       "phone": "",
-      "balance": 26350,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/15/2026, 4:06:37 PM",
+      "customer": "Ijaz Book Depot Nakyal",
+      "amount": 26350,
+      "ref": "FB online"
+    },
     {
       "date": "4/13/2026, 9:42:00 AM",
       "customer": "Chaurdary Book Depot Mzd",
@@ -7286,7 +7292,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776250370123,
+  "lastModified": 1776251197462,
   "royaltyPayments": [],
   "labours": [
     {
