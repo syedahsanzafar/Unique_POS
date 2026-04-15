@@ -625,7 +625,7 @@
       "id": 1774677693375,
       "name": "Maktaba e Rashidia Plandari",
       "phone": "923418998940",
-      "balance": 39975,
+      "balance": 15300,
       "discounts": {}
     },
     {
@@ -858,6 +858,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/15/2026, 12:24:48 PM",
+      "customer": "Maktaba e Rashidia Plandari",
+      "amount": 24675,
+      "ref": "Fb online"
+    },
     {
       "date": "4/13/2026, 9:42:00 AM",
       "customer": "Chaurdary Book Depot Mzd",
@@ -7176,7 +7182,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776230896744,
+  "lastModified": 1776237888592,
   "royaltyPayments": [],
   "labours": [
     {
