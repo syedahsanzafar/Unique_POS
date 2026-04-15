@@ -342,7 +342,7 @@
       "id": 1774679230281,
       "name": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
       "phone": "",
-      "balance": 36225,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/15/2026, 7:03:19 PM",
+      "customer": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
+      "amount": 36225,
+      "ref": "via 5star online"
+    },
     {
       "date": "4/15/2026, 4:06:58 PM",
       "customer": "Maktaba e Rashidia Plandari",
@@ -7298,7 +7304,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776251260092,
+  "lastModified": 1776261949206,
   "royaltyPayments": [],
   "labours": [
     {
