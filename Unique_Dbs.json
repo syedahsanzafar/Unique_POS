@@ -547,6 +547,13 @@
       "phone": "923314791271"
     },
     {
+      "id": 1776240699082,
+      "name": "Ijaz Book Depot Nakyal",
+      "phone": "",
+      "balance": 0,
+      "discounts": {}
+    },
+    {
       "id": 1774679292579,
       "name": "Iqra Book Depot Garhi Dopatta",
       "phone": "",
@@ -625,7 +632,7 @@
       "id": 1774677693375,
       "name": "Maktaba e Rashidia Plandari",
       "phone": "923418998940",
-      "balance": 0,
+      "balance": 39975,
       "discounts": {}
     },
     {
@@ -858,18 +865,6 @@
     }
   ],
   "payments": [
-    {
-      "date": "4/15/2026, 12:25:13 PM",
-      "customer": "Maktaba e Rashidia Plandari",
-      "amount": 15300,
-      "ref": "Fb online"
-    },
-    {
-      "date": "4/15/2026, 12:24:48 PM",
-      "customer": "Maktaba e Rashidia Plandari",
-      "amount": 24675,
-      "ref": "Fb online"
-    },
     {
       "date": "4/13/2026, 9:42:00 AM",
       "customer": "Chaurdary Book Depot Mzd",
@@ -7188,7 +7183,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776237914036,
+  "lastModified": 1776240699181,
   "royaltyPayments": [],
   "labours": [
     {
