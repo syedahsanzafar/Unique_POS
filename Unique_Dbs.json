@@ -440,7 +440,7 @@
     {
       "id": 1766667828955,
       "name": "Dawn Book Depot Hajira",
-      "balance": 731467,
+      "balance": 431467,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/17/2026, 2:11:41 PM",
+      "customer": "Dawn Book Depot Hajira",
+      "amount": 300000,
+      "ref": "FB online"
+    },
     {
       "date": "4/15/2026, 7:03:19 PM",
       "customer": "Chaudary (Karam Deen) Book Depot Garhi Dopatta",
@@ -7465,7 +7471,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776340137645,
+  "lastModified": 1776417101613,
   "royaltyPayments": [],
   "labours": [
     {
