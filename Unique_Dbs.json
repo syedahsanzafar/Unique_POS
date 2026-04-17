@@ -673,7 +673,7 @@
       "id": 1774678162655,
       "name": "Mujahid Book Depot Nakyal",
       "phone": "",
-      "balance": 6168.75,
+      "balance": -0.25,
       "discounts": {}
     },
     {
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/17/2026, 2:12:12 PM",
+      "customer": "Mujahid Book Depot Nakyal",
+      "amount": 6169,
+      "ref": "via 5 star online"
+    },
     {
       "date": "4/17/2026, 2:11:41 PM",
       "customer": "Dawn Book Depot Hajira",
@@ -7471,7 +7477,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776417101613,
+  "lastModified": 1776417132620,
   "royaltyPayments": [],
   "labours": [
     {
