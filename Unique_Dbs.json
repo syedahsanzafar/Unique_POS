@@ -781,7 +781,7 @@
     {
       "id": 234,
       "name": "Sadaat Book Depot Mzd",
-      "balance": 2332086.4,
+      "balance": 1332086.4,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/20/2026, 5:59:33 PM",
+      "customer": "Sadaat Book Depot Mzd",
+      "amount": 1000000,
+      "ref": "FB online"
+    },
     {
       "date": "4/20/2026, 5:58:43 PM",
       "customer": "Khawaja Book Depot Athmuqam",
@@ -7800,7 +7806,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776689923643,
+  "lastModified": 1776689973371,
   "royaltyPayments": [],
   "labours": [
     {
