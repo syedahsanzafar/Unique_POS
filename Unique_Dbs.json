@@ -597,7 +597,7 @@
     {
       "id": 224,
       "name": "Khawaja Book Depot Athmuqam",
-      "balance": 241085.88,
+      "balance": 141085.88,
       "discounts": {
         "101": 16,
         "102": 16,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/20/2026, 5:58:43 PM",
+      "customer": "Khawaja Book Depot Athmuqam",
+      "amount": 100000,
+      "ref": "Fb online"
+    },
     {
       "date": "4/20/2026, 4:41:42 PM",
       "customer": "Iqra Book Depot Rwp",
@@ -7794,7 +7800,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776689898461,
+  "lastModified": 1776689923643,
   "royaltyPayments": [],
   "labours": [
     {
