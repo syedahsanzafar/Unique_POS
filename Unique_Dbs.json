@@ -563,7 +563,7 @@
     {
       "id": 222,
       "name": "Iqra Book Depot Rwp",
-      "balance": 1130899,
+      "balance": 0,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/20/2026, 4:41:42 PM",
+      "customer": "Iqra Book Depot Rwp",
+      "amount": 1130899,
+      "ref": "FB online"
+    },
     {
       "date": "4/20/2026, 2:44:48 PM",
       "customer": "Roshan Book Depot Kotli",
@@ -7722,7 +7728,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776678302883,
+  "lastModified": 1776685302382,
   "royaltyPayments": [],
   "labours": [
     {
