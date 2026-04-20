@@ -764,7 +764,7 @@
     {
       "id": 233,
       "name": "Roshan Book Depot Kotli",
-      "balance": 28050,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/20/2026, 2:44:48 PM",
+      "customer": "Roshan Book Depot Kotli",
+      "amount": 28050,
+      "ref": "FB online"
+    },
     {
       "date": "4/20/2026, 2:44:21 PM",
       "customer": "Ijaz Book Depot Nakyal",
@@ -7716,7 +7722,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776678261426,
+  "lastModified": 1776678288998,
   "royaltyPayments": [],
   "labours": [
     {
