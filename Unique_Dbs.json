@@ -550,7 +550,7 @@
       "id": 1776240699082,
       "name": "Ijaz Book Depot Nakyal",
       "phone": "",
-      "balance": 30847.5,
+      "balance": -0.5,
       "discounts": {}
     },
     {
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/20/2026, 2:44:21 PM",
+      "customer": "Ijaz Book Depot Nakyal",
+      "amount": 30848,
+      "ref": "FB online"
+    },
     {
       "date": "4/17/2026, 2:12:12 PM",
       "customer": "Mujahid Book Depot Nakyal",
@@ -7710,7 +7716,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776678032308,
+  "lastModified": 1776678261426,
   "royaltyPayments": [],
   "labours": [
     {
