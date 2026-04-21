@@ -266,7 +266,7 @@
     {
       "id": 208,
       "name": "Awan Book Depot Tatapani",
-      "balance": 948015,
+      "balance": 0,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/21/2026, 3:52:44 PM",
+      "customer": "Awan Book Depot Tatapani",
+      "amount": 948015,
+      "ref": "Fb online"
+    },
     {
       "date": "4/21/2026, 9:12:33 AM",
       "customer": "Daizy Book Depot Nakyal",
@@ -7915,7 +7921,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776768721131,
+  "lastModified": 1776768841890,
   "royaltyPayments": [],
   "labours": [
     {
