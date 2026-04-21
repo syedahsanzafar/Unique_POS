@@ -457,7 +457,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 269724,
+      "balance": 1217724,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/21/2026, 5:24:02 PM",
+      "customer": "Diamond Book Depot Mzd",
+      "amount": -948000,
+      "ref": "Awan book depot"
+    },
     {
       "date": "4/21/2026, 3:52:44 PM",
       "customer": "Awan Book Depot Tatapani",
@@ -7921,7 +7927,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776768841890,
+  "lastModified": 1776774243322,
   "royaltyPayments": [],
   "labours": [
     {
