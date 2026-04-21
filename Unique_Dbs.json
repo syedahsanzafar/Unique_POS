@@ -181,7 +181,7 @@
     {
       "id": 204,
       "name": "Al Falah Book Depot Kundal Shahi",
-      "balance": 26350,
+      "balance": 0,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -434,7 +434,7 @@
       "id": 1774945585368,
       "name": "Daizy Book Depot Nakyal",
       "phone": "",
-      "balance": 60900,
+      "balance": 0,
       "discounts": {}
     },
     {
@@ -557,7 +557,7 @@
       "id": 1774679292579,
       "name": "Iqra Book Depot Garhi Dopatta",
       "phone": "",
-      "balance": 13174.5,
+      "balance": -0.5,
       "discounts": {}
     },
     {
@@ -673,7 +673,7 @@
       "id": 1774678162655,
       "name": "Mujahid Book Depot Nakyal",
       "phone": "",
-      "balance": 9869.75,
+      "balance": -0.25,
       "discounts": {}
     },
     {
@@ -865,6 +865,30 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/21/2026, 9:12:33 AM",
+      "customer": "Daizy Book Depot Nakyal",
+      "amount": 60900,
+      "ref": "via 5 star"
+    },
+    {
+      "date": "4/21/2026, 9:12:14 AM",
+      "customer": "Iqra Book Depot Garhi Dopatta",
+      "amount": 13175,
+      "ref": "FB online"
+    },
+    {
+      "date": "4/21/2026, 9:12:00 AM",
+      "customer": "Al Falah Book Depot Kundal Shahi",
+      "amount": 26350,
+      "ref": "via 5star"
+    },
+    {
+      "date": "4/21/2026, 9:11:34 AM",
+      "customer": "Mujahid Book Depot Nakyal",
+      "amount": 9870,
+      "ref": "via 5star"
+    },
     {
       "date": "4/20/2026, 5:59:33 PM",
       "customer": "Sadaat Book Depot Mzd",
@@ -7806,7 +7830,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776689973371,
+  "lastModified": 1776744905806,
   "royaltyPayments": [],
   "labours": [
     {
