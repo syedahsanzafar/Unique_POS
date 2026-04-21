@@ -283,7 +283,7 @@
     {
       "id": 1766667470611,
       "name": "Azad Book Depot Bhimber",
-      "balance": 2455084,
+      "balance": 2055084,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/21/2026, 10:59:37 AM",
+      "customer": "Azad Book Depot Bhimber",
+      "amount": 400000,
+      "ref": "Fb online"
+    },
     {
       "date": "4/21/2026, 9:12:33 AM",
       "customer": "Daizy Book Depot Nakyal",
@@ -7859,7 +7865,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776748817242,
+  "lastModified": 1776751178322,
   "royaltyPayments": [],
   "labours": [
     {
