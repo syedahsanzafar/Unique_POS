@@ -457,7 +457,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 1217724,
+      "balance": 1307124,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/21/2026, 5:24:49 PM",
+      "customer": "Diamond Book Depot Mzd",
+      "amount": -89400,
+      "ref": "Chaudary Book Depot"
+    },
     {
       "date": "4/21/2026, 5:24:02 PM",
       "customer": "Diamond Book Depot Mzd",
@@ -7927,7 +7933,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776774243322,
+  "lastModified": 1776774321252,
   "royaltyPayments": [],
   "labours": [
     {
