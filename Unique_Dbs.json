@@ -597,7 +597,7 @@
     {
       "id": 224,
       "name": "Khawaja Book Depot Athmuqam",
-      "balance": 141085.88,
+      "balance": -0.11999999999534339,
       "discounts": {
         "101": 16,
         "102": 16,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/22/2026, 8:42:54 PM",
+      "customer": "Khawaja Book Depot Athmuqam",
+      "amount": 141086,
+      "ref": "Fb online"
+    },
     {
       "date": "4/21/2026, 5:24:49 PM",
       "customer": "Diamond Book Depot Mzd",
@@ -7933,7 +7939,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1776774321252,
+  "lastModified": 1776872574739,
   "royaltyPayments": [],
   "labours": [
     {
