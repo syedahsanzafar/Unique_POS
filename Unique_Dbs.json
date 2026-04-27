@@ -174,7 +174,7 @@
     {
       "id": 1766668447918,
       "name": "AJK TEXTBOOK BOARD",
-      "balance": 430973,
+      "balance": 0,
       "discounts": {},
       "phone": "923005430455"
     },
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/27/2026, 6:25:22 PM",
+      "customer": "AJK TEXTBOOK BOARD",
+      "amount": 430973,
+      "ref": "Royalty adjustment "
+    },
     {
       "date": "4/27/2026, 5:28:10 PM",
       "customer": "Diamond Book Depot Mzd",
@@ -8098,7 +8104,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777296125840,
+  "lastModified": 1777296356210,
   "royaltyPayments": [
     {
       "amount": 1000000,
