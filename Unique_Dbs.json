@@ -457,7 +457,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 1307124,
+      "balance": 307124,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/27/2026, 5:28:10 PM",
+      "customer": "Diamond Book Depot Mzd",
+      "amount": 1000000,
+      "ref": "Royalty  AJK T.B.B"
+    },
     {
       "date": "4/22/2026, 8:42:54 PM",
       "customer": "Khawaja Book Depot Athmuqam",
@@ -8092,7 +8098,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777271626245,
+  "lastModified": 1777296125840,
   "royaltyPayments": [
     {
       "amount": 1000000,
