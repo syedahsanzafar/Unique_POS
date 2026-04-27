@@ -174,7 +174,7 @@
     {
       "id": 1766668447918,
       "name": "AJK TEXTBOOK BOARD",
-      "balance": 527205.5,
+      "balance": -0.5,
       "discounts": {},
       "phone": "923005430455"
     },
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "4/27/2026, 10:28:41 PM",
+      "customer": "AJK TEXTBOOK BOARD",
+      "amount": 527206,
+      "ref": "In Royalty"
+    },
     {
       "date": "4/22/2026, 8:42:54 PM",
       "customer": "Khawaja Book Depot Athmuqam",
@@ -8121,7 +8127,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777310827314,
+  "lastModified": 1777310921836,
   "royaltyPayments": [
     {
       "amount": 1000000,
