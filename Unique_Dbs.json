@@ -8104,11 +8104,16 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777296356210,
+  "lastModified": 1777296478713,
   "royaltyPayments": [
     {
       "amount": 1000000,
       "ref": "Askari Bank via Diamond Book Depot",
+      "date": "4/27/2026"
+    },
+    {
+      "amount": 469630,
+      "ref": "Security and bill",
       "date": "4/27/2026"
     }
   ],
