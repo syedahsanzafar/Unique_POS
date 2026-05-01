@@ -58,7 +58,7 @@
       "id": 103,
       "name": "HOME ECONOMICS 8",
       "price": 240,
-      "stock": 4310,
+      "stock": 4260,
       "target": 5000,
       "bundleSize": 40,
       "image": "data:image/jpeg;base64,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"
@@ -434,7 +434,7 @@
       "id": 1774945585368,
       "name": "Daizy Book Depot Nakyal",
       "phone": "",
-      "balance": 7737.5,
+      "balance": -0.5,
       "discounts": {}
     },
     {
@@ -515,7 +515,7 @@
     {
       "id": 220,
       "name": "Hameed Sons Kitab Ghar Abaspur",
-      "balance": 180315,
+      "balance": 30315,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -696,7 +696,7 @@
     {
       "id": 229,
       "name": "Neelum Book Land Athmuqam",
-      "balance": 173162.5,
+      "balance": 103162.5,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -865,6 +865,30 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/1/2026, 8:07:58 AM",
+      "customer": "Hameed Sons Kitab Ghar Abaspur",
+      "amount": 150000,
+      "ref": "Fb online"
+    },
+    {
+      "date": "4/29/2026, 7:12:04 PM",
+      "customer": "Daizy Book Depot Nakyal",
+      "amount": 7738,
+      "ref": "Via 5 star anjad"
+    },
+    {
+      "date": "4/29/2026, 7:11:34 PM",
+      "customer": "786 Book Depot Hattiyan",
+      "amount": 10200,
+      "ref": "Via 5 star amjad"
+    },
+    {
+      "date": "4/28/2026, 7:05:08 PM",
+      "customer": "Neelum Book Land Athmuqam",
+      "amount": 70000,
+      "ref": "FB online"
+    },
     {
       "date": "4/27/2026, 10:28:41 PM",
       "customer": "AJK TEXTBOOK BOARD",
@@ -1293,6 +1317,26 @@
     }
   ],
   "salesHistory": [
+    {
+      "inv": 1134,
+      "customer": "786 Book Depot Hattiyan",
+      "customerId": 1774679311254,
+      "date": "4/29/2026",
+      "items": [
+        {
+          "name": "HOME ECONOMICS 8",
+          "rate": 240,
+          "qty": 50,
+          "disc": 15,
+          "total": 10200,
+          "id": 103,
+          "bundles": 1.25
+        }
+      ],
+      "billTotal": 10200,
+      "prevBal": 0.25,
+      "finalPayable": 10200.25
+    },
     {
       "inv": 1133,
       "customer": "AJK TEXTBOOK BOARD",
@@ -8127,7 +8171,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777310921836,
+  "lastModified": 1777604982419,
   "royaltyPayments": [
     {
       "amount": 1000000,
