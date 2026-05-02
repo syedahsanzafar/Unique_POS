@@ -457,7 +457,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 1307124,
+      "balance": 307124,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/2/2026, 8:01:20 PM",
+      "customer": "Diamond Book Depot Mzd",
+      "amount": 1000000,
+      "ref": "Paid as royalty"
+    },
     {
       "date": "5/1/2026, 8:07:58 AM",
       "customer": "Hameed Sons Kitab Ghar Abaspur",
@@ -8247,7 +8253,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777721418977,
+  "lastModified": 1777734295587,
   "royaltyPayments": [
     {
       "amount": 1000000,
