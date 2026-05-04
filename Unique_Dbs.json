@@ -300,7 +300,7 @@
     {
       "id": 210,
       "name": "Azad Book Depot Mzd",
-      "balance": 445135,
+      "balance": 245135,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/4/2026, 12:49:24 PM",
+      "customer": "Azad Book Depot Mzd",
+      "amount": 200000,
+      "ref": "FB online"
+    },
     {
       "date": "5/2/2026, 8:01:20 PM",
       "customer": "Diamond Book Depot Mzd",
@@ -8253,7 +8259,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777734295587,
+  "lastModified": 1777880994225,
   "royaltyPayments": [
     {
       "amount": 1000000,
