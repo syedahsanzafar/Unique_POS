@@ -103,7 +103,7 @@
       "id": 1767728128691,
       "name": "A Quotation",
       "phone": "923000333678",
-      "balance": 3962.5,
+      "balance": -0.5,
       "discounts": {}
     },
     {
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/4/2026, 6:53:56 PM",
+      "customer": "A Quotation",
+      "amount": 3963,
+      "ref": "Fb online "
+    },
     {
       "date": "5/4/2026, 12:49:24 PM",
       "customer": "Azad Book Depot Mzd",
@@ -8298,7 +8304,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1777895482241,
+  "lastModified": 1777902865294,
   "royaltyPayments": [
     {
       "amount": 1000000,
