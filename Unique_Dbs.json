@@ -457,7 +457,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 307124,
+      "balance": 212034,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/10/2026, 6:09:46 AM",
+      "customer": "Diamond Book Depot Mzd",
+      "amount": 95090,
+      "ref": "Wasa Bill Outfall"
+    },
     {
       "date": "5/4/2026, 6:53:56 PM",
       "customer": "A Quotation",
@@ -8407,7 +8413,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1778066589348,
+  "lastModified": 1778375496284,
   "royaltyPayments": [
     {
       "amount": 1000000,
