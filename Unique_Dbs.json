@@ -416,7 +416,7 @@
     {
       "id": 216,
       "name": "College Book Depot Kotli",
-      "balance": 14112,
+      "balance": 0,
       "discounts": {
         "101": 16,
         "102": 16,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/11/2026, 2:28:58 PM",
+      "customer": "College Book Depot Kotli",
+      "amount": 14112,
+      "ref": "Fb online"
+    },
     {
       "date": "5/10/2026, 6:09:46 AM",
       "customer": "Diamond Book Depot Mzd",
@@ -8451,7 +8457,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1778480265757,
+  "lastModified": 1778491845832,
   "royaltyPayments": [
     {
       "amount": 1000000,
