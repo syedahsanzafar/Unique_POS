@@ -580,7 +580,7 @@
     {
       "id": 223,
       "name": "Kashmir Book Depot Rwp",
-      "balance": 1118235,
+      "balance": 818235,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/20/2026, 11:54:08 AM",
+      "customer": "Kashmir Book Depot Rwp",
+      "amount": 300000,
+      "ref": "FB online"
+    },
     {
       "date": "5/14/2026, 12:51:15 PM",
       "customer": "Azad Book Depot Bhimber",
@@ -8572,7 +8578,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1779256840786,
+  "lastModified": 1779260125632,
   "royaltyPayments": [
     {
       "amount": 1000000,
