@@ -457,7 +457,7 @@
     {
       "id": 218,
       "name": "Diamond Book Depot Mzd",
-      "balance": 212034,
+      "balance": 142034,
       "discounts": {
         "101": 20,
         "102": 20,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/22/2026, 9:36:32 PM",
+      "customer": "Diamond Book Depot Mzd",
+      "amount": 70000,
+      "ref": "Cash"
+    },
     {
       "date": "5/22/2026, 8:58:34 PM",
       "customer": "Awami Book Depot Mzd",
@@ -8492,7 +8498,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1779465515039,
+  "lastModified": 1779467792923,
   "royaltyPayments": [
     {
       "amount": 1000000,
