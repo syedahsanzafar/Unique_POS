@@ -249,7 +249,7 @@
     {
       "id": 1766645946801,
       "name": "Awami Book Depot Mzd",
-      "balance": 186735,
+      "balance": 136735,
       "discounts": {
         "101": 0,
         "102": 0,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/22/2026, 8:58:34 PM",
+      "customer": "Awami Book Depot Mzd",
+      "amount": 50000,
+      "ref": "Cash "
+    },
     {
       "date": "5/20/2026, 11:54:08 AM",
       "customer": "Kashmir Book Depot Rwp",
@@ -8486,7 +8492,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1779271832841,
+  "lastModified": 1779465515039,
   "royaltyPayments": [
     {
       "amount": 1000000,
