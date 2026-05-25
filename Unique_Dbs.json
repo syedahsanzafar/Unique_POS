@@ -440,7 +440,7 @@
     {
       "id": 1766667828955,
       "name": "Dawn Book Depot Hajira",
-      "balance": 505464.5,
+      "balance": 305464.5,
       "discounts": {
         "101": 17,
         "102": 17,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "5/25/2026, 10:57:33 PM",
+      "customer": "Dawn Book Depot Hajira",
+      "amount": 200000,
+      "ref": "Fb Onlne"
+    },
     {
       "date": "5/22/2026, 9:36:32 PM",
       "customer": "Diamond Book Depot Mzd",
@@ -8498,7 +8504,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1779470505155,
+  "lastModified": 1779731899196,
   "royaltyPayments": [
     {
       "amount": 1000000,
