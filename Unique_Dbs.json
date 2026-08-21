@@ -679,7 +679,7 @@
     {
       "id": 228,
       "name": "Muslim Book Depot Mzd",
-      "balance": 270050,
+      "balance": 70050,
       "discounts": {
         "101": 15,
         "102": 15,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "8/19/2026, 1:48:21 PM",
+      "customer": "Muslim Book Depot Mzd",
+      "amount": 200000,
+      "ref": "Online transfer "
+    },
     {
       "date": "5/26/2026, 4:17:21 PM",
       "customer": "Sadaat Book Depot Mzd",
@@ -8510,7 +8516,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1780656360047,
+  "lastModified": 1787349195998,
   "royaltyPayments": [
     {
       "amount": 1000000,
