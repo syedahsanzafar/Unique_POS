@@ -283,7 +283,7 @@
     {
       "id": 1766667470611,
       "name": "Azad Book Depot Bhimber",
-      "balance": 2129244,
+      "balance": 1879244,
       "discounts": {
         "101": 18,
         "102": 18,
@@ -865,6 +865,12 @@
     }
   ],
   "payments": [
+    {
+      "date": "9/14/2026, 12:37:00 PM",
+      "customer": "Azad Book Depot Bhimber",
+      "amount": 250000,
+      "ref": "FB online "
+    },
     {
       "date": "8/19/2026, 1:48:21 PM",
       "customer": "Muslim Book Depot Mzd",
@@ -8536,7 +8542,7 @@
       "qty": 15000
     }
   ],
-  "lastModified": 1789361079618,
+  "lastModified": 1789371421354,
   "royaltyPayments": [
     {
       "amount": 1000000,
